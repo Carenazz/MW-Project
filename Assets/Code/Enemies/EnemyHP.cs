@@ -8,13 +8,22 @@ public class EnemyHP : MonoBehaviour
 
     public int maxHealth = 100, currentHealth;
 
+    #region Components
+    Rigidbody2D rigid;
+    Collider2D m_coll;
     EnemyScript enemy;
-
+    #endregion
 
     void Start()
     {
+
         currentHealth = maxHealth;
+
+        #region calling components
         enemy = GetComponent<EnemyScript>();
+        m_coll = GetComponent<Collider2D>();
+        rigid = GetComponent<Rigidbody2D>();
+        #endregion
     }
 
     void Update()
@@ -45,6 +54,8 @@ public class EnemyHP : MonoBehaviour
         {
             enemy.enabled = false;
         }
+        m_coll.enabled = !m_coll.enabled;
+        rigid.gravityScale = 0;
     }
     #endregion
 }
