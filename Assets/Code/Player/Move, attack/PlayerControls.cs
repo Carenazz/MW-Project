@@ -151,6 +151,8 @@ public class PlayerControls : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
+            currentHealth = currentHealth + 20;
+            healthBar.SetHealth(currentHealth);
         }
 
         #region levelskips
