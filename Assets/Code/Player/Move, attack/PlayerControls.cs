@@ -11,6 +11,7 @@ using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
 {
+    #region End all
     #region Variables
 
     #region Movements
@@ -333,5 +334,7 @@ public class PlayerControls : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    #endregion
+
     #endregion
 }
