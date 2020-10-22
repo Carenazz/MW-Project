@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 8667ffbafac614240a6e0004b1a08854
+  - enabled: 1
+    path: Assets/Scenes/Swamp/Level_Swamp.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Swamp/Level_Swamp2.unity
+    guid: e45203561ae758c44b5eaab4fd28cde0
+  - enabled: 1
+    path: Assets/Scenes/Swamp/Level_Swamp3.unity
+    guid: 4f9e881854753184c985440024378e65
+  - enabled: 1
+    path: Assets/Scenes/Swamp/Level_Swamp_Boss.unity
+    guid: f7d4ff1db1b9b8d4a8eb8c26471a2e95
+  - enabled: 1
+    path: Assets/Scenes/Desert/Desert_Level1.unity
+    guid: 1ca38456129d66c4895778d501c8456e
+  - enabled: 1
+    path: Assets/Scenes/Mine/Mine1.unity
+    guid: f5b9313ac700d894f96bc1b2a379495c
+  - enabled: 1
+    path: Assets/Scenes/Snow/SMR.unity
+    guid: f3b20131a31313046b704fd0e102f744
+  m_configObjects: {}

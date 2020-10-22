@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Platform
+  - Wall
+  - Enemy
+  - Detector
+  - dSkip
+  - mSkip
+  - Spawner
+  - SnowSkip
+  - mPlatform
+  - Trap
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Enemy
+  - Wall
+  - Pushable
+  - Ladder
+  - Player
+  - Platforms
+  - Trap
+  - Cold
+  - Button
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background2
+    uniqueID: 1739860181
+    locked: 0
+  - name: Player
+    uniqueID: 2812407437
+    locked: 0
+  - name: Foreground
+    uniqueID: 82173947
+    locked: 0
+  - name: Platforms
+    uniqueID: 1275637369
+    locked: 0
