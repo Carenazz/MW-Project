@@ -10463,10 +10463,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64252e0f2c4573842ba558011108524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
   jumpSpeed: 7
   jDistance: 0.5
-  isJumping: 0
+  pDist: 0.5
+  speed: 7
+  movement: 0
   healthBar: {fileID: 714411747}
   maxHealth: 100
   currentHealth: 0
@@ -10474,10 +10475,12 @@ MonoBehaviour:
   distance: 0.5
   bDistance: 1
   climbSpeed: 3
-  isClimbing: 0
-  isPushing: 0
   isPressing: 0
+  isGrounded: 0
+  isClimbing: 0
+  isJumping: 0
   bTimer: 1.5
+  jTimer: 0
   animator: {fileID: 2040184738}
   whatIsLadder:
     serializedVersion: 2
@@ -11937,11 +11940,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1914037873450934447, guid: f2e11df0ddeb20242a1f2404d437f4fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.98
+      value: 26.79
       objectReference: {fileID: 0}
     - target: {fileID: 1914037873450934447, guid: f2e11df0ddeb20242a1f2404d437f4fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.28
+      value: 8.6
       objectReference: {fileID: 0}
     - target: {fileID: 1914037873450934447, guid: f2e11df0ddeb20242a1f2404d437f4fc, type: 3}
       propertyPath: m_LocalPosition.z

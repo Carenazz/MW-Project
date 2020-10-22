@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallTrap (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 380475011046131863, guid: 8de6285fc8b847b4aab24e2485effa95, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de6285fc8b847b4aab24e2485effa95, type: 3}
 --- !u!4 &84779814 stripped
@@ -2882,7 +2886,7 @@ GameObject:
   - component: {fileID: 603624703}
   - component: {fileID: 603624705}
   - component: {fileID: 603624704}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_32
   m_TagString: mPlatform
   m_Icon: {fileID: 0}
@@ -11972,7 +11976,7 @@ GameObject:
   - component: {fileID: 1834256580}
   - component: {fileID: 1834256579}
   - component: {fileID: 1834256578}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: smallPlatMoving
   m_TagString: mPlatform
   m_Icon: {fileID: 0}

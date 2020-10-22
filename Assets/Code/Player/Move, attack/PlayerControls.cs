@@ -14,12 +14,10 @@ public class PlayerControls : MonoBehaviour
     #region Variables
 
     #region Movements
-    public float speed;
-    private float movement;
     private Rigidbody2D rigid;
 
-    public float jumpSpeed, jDistance;
-    public bool isJumping;
+    [SerializeField]
+    private float jumpSpeed, jDistance, pDist = 0.5f, speed, movement;
     #endregion
 
     #region Health system
@@ -36,18 +34,19 @@ public class PlayerControls : MonoBehaviour
     private float inputVertical;
     public float distance, bDistance = 3f;
     public float climbSpeed;
-    public bool isClimbing;
     #endregion
 
     // Attack
     Weapon weapon;
 
-    // Pushing & Button
+    // Timer / bools
 
-    private bool isPressing;
     [SerializeField]
-    private float bTimer = 0f;
+    private bool isPressing, isGrounded, isClimbing, isJumping;
+    [SerializeField]
+    private float bTimer = 0f, jTimer = 0f;
 
+    #region Components and Layermasks
     // Animations
 
     public Animator animator;
@@ -56,6 +55,7 @@ public class PlayerControls : MonoBehaviour
     // Layer Masks
 
     public LayerMask whatIsLadder, whatIsPlatform, whatIsPushable, whatIsButton;
+    #endregion
 
     // Inventory inspired by CodeMonkey
 
@@ -136,13 +136,13 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.tag == "Platform" || collision.transform.tag == "Enemy" || collision.transform.tag == "mPlatform")
+
+        if (collision.transform.tag == "Platform" || collision.transform.tag == "mPlatform")
         {
             isJumping = false;
             animator.SetBool("Jumping", false);
-            isClimbing = false;
-            animator.SetBool("Climber", false);
         }
+
         if (collision.transform.tag == "mPlatform")
         {
             this.transform.parent = collision.gameObject.transform;
@@ -227,12 +227,17 @@ public class PlayerControls : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && !isJumping && !isClimbing)
+        RaycastHit2D platInfo = Physics2D.Raycast(transform.position, Vector2.down, pDist, whatIsPlatform);
+
+        if (platInfo.collider != null)
         {
-            rigid.velocity = new Vector2(rigid.velocity.x, jumpSpeed);
+            if (Input.GetButtonDown("Jump") && !isJumping && !isClimbing)
             {
-                isJumping = true;
-                animator.SetBool("Jumping", true);
+                rigid.velocity = new Vector2(rigid.velocity.x, jumpSpeed);
+                {
+                    isJumping = true;
+                    animator.SetBool("Jumping", true);
+                }
             }
         }
     }
