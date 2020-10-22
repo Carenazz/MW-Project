@@ -15642,7 +15642,7 @@ GameObject:
   - component: {fileID: 1646130764}
   - component: {fileID: 1646130763}
   - component: {fileID: 1646130762}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 3
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -16566,7 +16566,7 @@ GameObject:
   - component: {fileID: 1830910585}
   - component: {fileID: 1830910584}
   - component: {fileID: 1830910583}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Pyramid Exit
   m_TagString: Platform
   m_Icon: {fileID: 0}
