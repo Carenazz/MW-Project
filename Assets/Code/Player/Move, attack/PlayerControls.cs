@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
 
     // Pushing & Button
 
-    public bool isPushing, isPressing;
+    private bool isPressing;
     [SerializeField]
     private float bTimer = 0f;
 
@@ -278,12 +278,10 @@ public class PlayerControls : MonoBehaviour
         RaycastHit2D pushInfo2 = Physics2D.Raycast(transform.position + transform.up * 1, Vector2.right, 0.5f, whatIsPushable);
         if (pushInfo.collider != null || pushInfo2.collider != null)
         {
-            isPushing = true;
             animator.SetBool("Pusher", true);
         }
         else
         {
-            isPushing = false;
             animator.SetBool("Pusher", false);
         }
     }
