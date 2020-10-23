@@ -49083,9 +49083,9 @@ GameObject:
   - component: {fileID: 1736732341}
   - component: {fileID: 1736732340}
   - component: {fileID: 1736732344}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Viking
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
