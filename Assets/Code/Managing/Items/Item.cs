@@ -6,7 +6,7 @@ public class Item
 {
    public enum ItemType
     {
-        HealthPotion,
+        HealthPotion, ManaPotion, 
     }
 
     public ItemType itemType;

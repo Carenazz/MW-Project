@@ -59,6 +59,7 @@ public class PlayerControls : MonoBehaviour
 
     // Inventory inspired by CodeMonkey
 
+    [SerializeField] private UI_Inventory uiInventory;
     private Inventory inventory;
 
     // Debugging attemtps.
@@ -82,6 +83,7 @@ public class PlayerControls : MonoBehaviour
         SRender = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         weapon = GetComponent<Weapon>();
+        uiInventory.SetInventory(inventory);
         #endregion
 
         DontDestroyOnLoad(transform.gameObject);
