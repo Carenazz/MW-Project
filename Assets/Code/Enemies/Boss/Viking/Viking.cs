@@ -30,11 +30,16 @@ public class Viking : StateMachineBehaviour
         move.LookAtPlayer();
 
         move.FollowPlayer();
+
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("Attack");
+        }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        animator.ResetTrigger("Attack");
     }
 
 }
