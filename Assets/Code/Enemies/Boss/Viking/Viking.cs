@@ -27,14 +27,18 @@ public class Viking : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        #region VikingMovement
         move.LookAtPlayer();
 
         move.FollowPlayer();
+        #endregion
 
+        #region Attack
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("Attack");
         }
+        #endregion
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

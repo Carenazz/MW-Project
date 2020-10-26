@@ -17,6 +17,7 @@ public class VikingMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    #region Follow & Look for Statemachine
     public void LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -41,4 +42,5 @@ public class VikingMove : MonoBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
         rb.MovePosition(newPos);
     }
+    #endregion
 }

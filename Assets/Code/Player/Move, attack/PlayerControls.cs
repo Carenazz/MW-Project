@@ -39,12 +39,12 @@ public class PlayerControls : MonoBehaviour
     // Attack
     Weapon weapon;
 
-    // Timer / bools
-
+    #region Timer + Bools
     [SerializeField]
     private bool isPressing, isGrounded, isClimbing, isJumping;
     [SerializeField]
     private float bTimer = 0f, jTimer = 0f, rTimer = 10f;
+    #endregion
 
     #region Components and Layermasks
     // Animations
