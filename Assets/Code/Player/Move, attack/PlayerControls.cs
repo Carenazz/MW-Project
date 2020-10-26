@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField]
     private bool isPressing, isGrounded, isClimbing, isJumping;
     [SerializeField]
-    private float bTimer = 0f, jTimer = 0f;
+    private float bTimer = 0f, jTimer = 0f, rTimer = 10f;
 
     #region Components and Layermasks
     // Animations
@@ -105,6 +105,8 @@ public class PlayerControls : MonoBehaviour
                 Jump();
 
                 PButton();
+
+                rTimer -= Time.deltaTime;
             }
             else
             {
@@ -114,6 +116,11 @@ public class PlayerControls : MonoBehaviour
                     isPressing = false;
                     animator.SetBool("Button", false);
                 }
+            }
+            if (rTimer <= 0)
+            {
+                rTimer = 10f;
+                Regeneration();
             }
         }
 
@@ -306,8 +313,14 @@ public class PlayerControls : MonoBehaviour
 
     public void Healed(int amount)
     {
-            currentHealth += amount;
-            healthBar.SetHealth(currentHealth);
+        currentHealth += amount;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    private void Regeneration()
+    {
+        currentHealth += 5;
+        healthBar.SetHealth(currentHealth);
     }
     
     void Dying()
