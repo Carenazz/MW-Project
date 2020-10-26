@@ -11,7 +11,7 @@ public class VikingHP : MonoBehaviour
 
     #region Components
     Animator anim;
-    Viking viking;
+    VikingMove viking;
     Enabler enable;
     public GameObject key;
     #endregion
@@ -24,7 +24,7 @@ public class VikingHP : MonoBehaviour
 
         #region Get Components
         anim = GetComponent<Animator>();
-        viking = GetComponent<Viking>();
+        viking = GetComponent<VikingMove>();
         enable = key.GetComponent<Enabler>();
         #endregion
     }
@@ -49,6 +49,11 @@ public class VikingHP : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
 
     public void Regenerate()
@@ -62,8 +67,8 @@ public class VikingHP : MonoBehaviour
 
         if (viking.enabled == true)
         {
-
+            viking.enabled = false;
+            enable.Enabled();
         }
-
     }
 }

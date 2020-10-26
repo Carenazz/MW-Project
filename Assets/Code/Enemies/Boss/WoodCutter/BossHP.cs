@@ -25,11 +25,6 @@ public class BossHP : MonoBehaviour
 
     }
 
-    void Update()
-    {
-
-    }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
