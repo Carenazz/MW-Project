@@ -4,14 +4,29 @@ using UnityEngine;
 
 public class VikingHP : MonoBehaviour
 {
-    int currentHealth, maxHealth = 500, regen;
+
+    [SerializeField]
+    private int currentHealth, maxHealth = 800, regen;
     public float regenTimer;
+
+    #region Components
+    Animator anim;
+    Viking viking;
+    Enabler enable;
+    public GameObject key;
+    #endregion
 
     void Start()
     {
         currentHealth = maxHealth;
         regenTimer = 5f;
         regen = 5;
+
+        #region Get Components
+        anim = GetComponent<Animator>();
+        viking = GetComponent<Viking>();
+        enable = key.GetComponent<Enabler>();
+        #endregion
     }
 
     void Update()
@@ -43,6 +58,12 @@ public class VikingHP : MonoBehaviour
 
     void Die()
     {
-        this.enabled = false;
+        anim.SetBool("Death", true);
+
+        if (viking.enabled == true)
+        {
+
+        }
+
     }
 }

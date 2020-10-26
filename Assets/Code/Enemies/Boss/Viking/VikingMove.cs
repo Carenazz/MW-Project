@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class VikingMove : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D rb;
+
+    private float speed = 5f;
+
+    Transform player;
+    private bool isFlipped = false;
+
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LookAtPlayer()
     {
-        
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+        if (transform.position.x < player.position.x && !isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = false;
+        }
+        else if (transform.position.x > player.position.x && isFlipped)
+        {
+            transform.localScale = flipped;
+            transform.Rotate(0f, 180f, 0f);
+            isFlipped = true;
+        }
+    }
+
+    public void FollowPlayer()
+    {
+        Vector2 target = new Vector2(player.position.x, rb.position.y);
+        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+        rb.MovePosition(newPos);
     }
 }
