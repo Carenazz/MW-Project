@@ -75,8 +75,12 @@ public class Weapon : MonoBehaviour
                     hit.GetComponent<SnowHP>().TakeDamage(attackDamage);
                 }
                 #endregion
-
+                if (hit.gameObject.GetComponent<VikingHP>() != null)
+                {
+                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage);
+                }
                 #region Testing hits
+                
                 #endregion
             }
         }
@@ -118,6 +122,10 @@ public class Weapon : MonoBehaviour
                 #endregion
 
                 #region Test hits
+                if (hit.gameObject.GetComponent<VikingHP>() != null)
+                {
+                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage);
+                }
                 #endregion
             }
         }

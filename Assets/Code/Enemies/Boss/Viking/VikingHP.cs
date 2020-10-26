@@ -46,9 +46,9 @@ public class VikingHP : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= amount;
+        currentHealth -= damage;
 
         if (currentHealth <= 0)
         {
@@ -58,7 +58,10 @@ public class VikingHP : MonoBehaviour
 
     public void Regenerate()
     {
-        currentHealth += regen;
+        if (currentHealth < 800)
+        {
+            currentHealth += regen;
+        }
     }
 
     void Die()

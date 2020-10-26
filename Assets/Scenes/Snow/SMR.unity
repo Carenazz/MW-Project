@@ -49178,6 +49178,9 @@ GameObject:
   - component: {fileID: 1736732341}
   - component: {fileID: 1736732340}
   - component: {fileID: 1736732344}
+  - component: {fileID: 1736732346}
+  - component: {fileID: 1736732345}
+  - component: {fileID: 1736732347}
   m_Layer: 0
   m_Name: Viking
   m_TagString: Untagged
@@ -49311,6 +49314,56 @@ CircleCollider2D:
   m_Offset: {x: 0.17167032, y: 0.49520254}
   serializedVersion: 2
   m_Radius: 0.4737506
+--- !u!114 &1736732345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736732339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e74ef9e781e5541951318ba5f50172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1736732346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736732339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400d7e0aa27027849bac56980c9919a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 800
+  regen: 0
+  regenTimer: 0
+  key: {fileID: 595036068}
+--- !u!50 &1736732347
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736732339}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1737354556
 GameObject:
   m_ObjectHideFlags: 0
