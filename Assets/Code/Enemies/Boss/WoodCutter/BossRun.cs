@@ -18,23 +18,30 @@ public class BossRun : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        #region Getting Components
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         boss = animator.GetComponent<BossScript>();
         jump = animator.GetComponent<BossJump>();
+        #endregion
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-            boss.LookAtPlayer();
+        #region Movements
+        boss.LookAtPlayer();
 
-            boss.FollowPlayer();
+        boss.FollowPlayer();
 
-            if (Vector2.Distance(player.position, rb.position) <= attackRange)
-            {
-                animator.SetTrigger("Attacking");
-            }
-            jump.Jump();
+        jump.Jump();
+        #endregion
+
+        #region Attack
+        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        {
+            animator.SetTrigger("Attacking");
+        }
+        #endregion
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
