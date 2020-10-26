@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BossJump : MonoBehaviour
 {
+    #region Variables
     public float jumpSpeed = 8f;
     public float distance = 0.5f;
     
@@ -14,6 +15,8 @@ public class BossJump : MonoBehaviour
     public Transform target;
 
     Rigidbody2D rb;
+
+    #endregion
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

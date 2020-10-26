@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BossHP : MonoBehaviour
 {
+    #region Variables
     public Animator animator;
 
     [SerializeField]
@@ -16,6 +17,7 @@ public class BossHP : MonoBehaviour
     public GameObject key;
 
     BossScript enemy;
+    #endregion
 
     void Start()
     {
@@ -24,6 +26,8 @@ public class BossHP : MonoBehaviour
         enable = key.GetComponent<Enabler>();
 
     }
+
+    #region Health System
 
     public void TakeDamage(int damage)
     {
@@ -47,4 +51,5 @@ public class BossHP : MonoBehaviour
             enable.Enabled();
         }
     }
+    #endregion
 }

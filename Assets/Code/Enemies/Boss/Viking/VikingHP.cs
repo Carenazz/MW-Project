@@ -46,6 +46,8 @@ public class VikingHP : MonoBehaviour
         }
     }
 
+    #region Health system
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -71,4 +73,5 @@ public class VikingHP : MonoBehaviour
             enable.Enabled();
         }
     }
+    #endregion
 }

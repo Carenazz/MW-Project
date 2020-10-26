@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    #region Variables
     Rigidbody2D rb;
 
     [SerializeField]
@@ -15,13 +16,19 @@ public class Movement : MonoBehaviour
     Transform player;
     public bool isFlipped = false;
 
+    #endregion
+
     private void Awake()
     {
+        #region Components
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         hp = GetComponent<EnemyHP>();
         anim = GetComponent<Animator>();
+        #endregion
     }
+
+    #region Movement System
     public void LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -54,4 +61,5 @@ public class Movement : MonoBehaviour
             anim.SetBool("isIdle", true);
         }
     }
+    #endregion
 }

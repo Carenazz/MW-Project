@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class HyenaHP : MonoBehaviour
 {
+    #region Variables
     public Animator animator;
 
     public int maxHealth = 100;
     public int currentHealth;
 
     Movement enemy;
-
+    #endregion
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class HyenaHP : MonoBehaviour
         enemy = GetComponent<Movement>();
     }
 
+    #region Health System
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -40,4 +42,6 @@ public class HyenaHP : MonoBehaviour
             enemy.enabled = false;
         }
     }
+    #endregion
 }
+

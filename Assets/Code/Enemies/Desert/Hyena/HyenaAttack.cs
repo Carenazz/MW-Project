@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class HyenaAttack : MonoBehaviour
 {
+    #region Variables
     public int attackDamage = 20;
 
     public Vector3 attackOffset;
     public float attackRange = 2f;
     public LayerMask attackMask;
+    #endregion
 
     public void Attack()
     {

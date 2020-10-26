@@ -50,6 +50,7 @@ public class EnemyScript : MonoBehaviour
         {
             if (timer <= 0f)
             {
+                #region Collision + Attack
                 RaycastHit2D hitInfo = Physics2D.Raycast(hitDetection.position, Vector2.up, distance);
                 Debug.DrawRay(hitDetection.position, Vector2.up, Color.red);
                 if (hitInfo.collider != null)
@@ -59,10 +60,9 @@ public class EnemyScript : MonoBehaviour
                         timer = 1;
 
                         animator.SetTrigger("Attack");
-
-                        Debug.Log("Hit player");
                     }
                 }
+                #endregion
             }
             else if (timer > 0f)
             {
@@ -73,6 +73,7 @@ public class EnemyScript : MonoBehaviour
 
             animator.SetFloat("Speed", Mathf.Abs(speed));
 
+            #region Raycast detecting wall
             RaycastHit2D wallInfo = Physics2D.Raycast(wallDetection.position, Vector2.left, distance);
             Debug.DrawRay(wallDetection.position, Vector2.left, Color.red);
             if (wallInfo.collider != null)
@@ -91,6 +92,7 @@ public class EnemyScript : MonoBehaviour
                     }
                 }
             }
+            #endregion
         }
     }
 }

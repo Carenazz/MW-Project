@@ -5,18 +5,22 @@ using UnityEngine;
 
 public class BossScript : MonoBehaviour
 {
+    #region variables
     Rigidbody2D rb;
 
     public float speed = 2.5f;
 
     Transform player;
     public bool isFlipped = false;
+    #endregion
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
     }
+
+    #region Look and Follow
     public void LookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -41,4 +45,5 @@ public class BossScript : MonoBehaviour
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
         rb.MovePosition(newPos);
     }
+    #endregion
 }

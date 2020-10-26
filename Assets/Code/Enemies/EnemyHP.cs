@@ -26,12 +26,6 @@ public class EnemyHP : MonoBehaviour
         #endregion
     }
 
-    void Update()
-    {
-        
-    }
-
-
     #region Damage / Death
     public void TakeDamage(int damage)
     {
