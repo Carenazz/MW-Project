@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class VikingMove : MonoBehaviour
 {
+    #region Variables
     Rigidbody2D rb;
+    Animator anim;
 
-    private float speed = 5f;
+    private float speed = 5f, dist = 12f;
 
     Transform player;
     private bool isFlipped = false;
+    #endregion
 
     void Start()
     {
@@ -40,7 +43,15 @@ public class VikingMove : MonoBehaviour
     {
         Vector2 target = new Vector2(player.position.x, rb.position.y);
         Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
-        rb.MovePosition(newPos);
+        if (Vector2.Distance(transform.position, player.position) < dist)
+        {
+            rb.MovePosition(newPos);
+            anim.SetBool("idle", false);
+        }
+        else
+        {
+            anim.SetBool("idle", true);
+        }
     }
     #endregion
 }
