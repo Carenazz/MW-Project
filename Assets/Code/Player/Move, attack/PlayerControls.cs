@@ -320,12 +320,12 @@ public class PlayerControls : MonoBehaviour
         }
         else if (deathTimer <= 0)
         {
-            transform.position = GameObject.FindWithTag("Respawn").transform.position;
             animator.SetBool("Death", false);
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
             deathTimer = 1.5f;
             maxLives--;
+            transform.position = GameObject.FindWithTag("Respawn").transform.position;
             weapon.enabled = true;
         }
     }
