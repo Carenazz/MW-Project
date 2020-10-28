@@ -7,6 +7,7 @@ public class Fire : MonoBehaviour
     public float speed = 9f;
     public int damage = 20;
     public Rigidbody2D rigid;
+    public GameObject impactEffect;
 
     void Start()
     {
@@ -20,6 +21,9 @@ public class Fire : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
+
+        Instantiate(impactEffect, transform.position, transform.rotation);
+
         Destroy(gameObject);
     }
 }
