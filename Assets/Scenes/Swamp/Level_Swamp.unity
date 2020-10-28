@@ -8605,7 +8605,7 @@ Animation:
   - {fileID: 7400000, guid: 43ec96874cdc1c84aa2017e4b7d45e72, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
 --- !u!212 &1088280274
 SpriteRenderer:
@@ -8666,7 +8666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088280272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.909723, y: -1.8, z: 0}
+  m_LocalPosition: {x: -14.909723, y: -7.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -23,7 +23,5 @@ public class Fire : MonoBehaviour
         }
 
         Instantiate(impactEffect, transform.position, transform.rotation);
-
-        Destroy(gameObject);
     }
 }
