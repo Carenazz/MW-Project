@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Spells : MonoBehaviour
@@ -7,8 +8,8 @@ public class Spells : MonoBehaviour
     public Transform firePoint;
     public GameObject fireSpell;
 
-    [SerializeField]
-    private int cost;
+    public int cost;
+    private float timer = 0f;
 
     Mana mana;
 
@@ -19,11 +20,17 @@ public class Spells : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (timer <= 0f)
         {
-            Shoot();
-            cost = 25;
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Shoot();
+                cost = 25;
+                timer = 4f;
+            }
         }
+        else
+            timer -= Time.deltaTime;
     }
 
     void Shoot()

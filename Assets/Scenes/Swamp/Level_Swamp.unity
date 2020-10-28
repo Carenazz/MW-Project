@@ -11958,7 +11958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 204839898}
   fireSpell: {fileID: 1898927041069414939, guid: 7d13609d8cbb40e4dacdd25efe9292fa, type: 3}
-  cost: 0
+  cost: 25
 --- !u!114 &2040184741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12115,6 +12115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056285631}
   - component: {fileID: 2056285632}
+  - component: {fileID: 2056285633}
   m_Layer: 5
   m_Name: Manabar
   m_TagString: Untagged
@@ -12187,12 +12188,26 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 150
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 150
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2056285633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056285630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75d1244c9c458d4d8396ea8761eebec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 2056285632}
+  manaBar: {fileID: 2040184741}
 --- !u!1001 &2064992503
 PrefabInstance:
   m_ObjectHideFlags: 0
