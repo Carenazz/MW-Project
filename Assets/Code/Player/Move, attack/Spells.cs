@@ -7,13 +7,22 @@ public class Spells : MonoBehaviour
     public Transform firePoint;
     public GameObject fireSpell;
 
-    
+    [SerializeField]
+    private int cost;
+
+    Mana mana;
+
+    private void Start()
+    {
+        mana = GetComponent<Mana>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
             Shoot();
-
+            cost = 25;
         }
     }
 
@@ -21,5 +30,6 @@ public class Spells : MonoBehaviour
     {
         Instantiate(fireSpell, firePoint.position, firePoint.rotation);
 
+        mana.ManaUsed(cost);
     }
 }

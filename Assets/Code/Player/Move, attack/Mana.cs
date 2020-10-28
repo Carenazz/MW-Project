@@ -25,7 +25,7 @@ public class Mana : MonoBehaviour
         }
     }
 
-    void ManaUsed(int amount)
+    public void ManaUsed(int amount)
     {
         mana -= amount;
     }
