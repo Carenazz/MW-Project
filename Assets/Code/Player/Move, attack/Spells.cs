@@ -7,8 +7,6 @@ public class Spells : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject fireSpell;
-
-    public int cost;
     private float timer = 0f;
 
     Mana mana;
@@ -24,9 +22,12 @@ public class Spells : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
-                Shoot();
-                cost = 25;
-                timer = 4f;
+                if (mana.mana >= 25)
+                {
+                    Shoot();
+                    mana.ManaUsed(25);
+                    timer = 3f;
+                }
             }
         }
         else
@@ -36,7 +37,5 @@ public class Spells : MonoBehaviour
     void Shoot()
     {
         Instantiate(fireSpell, firePoint.position, firePoint.rotation);
-
-        mana.ManaUsed(cost);
     }
 }

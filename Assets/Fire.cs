@@ -22,5 +22,6 @@ public class Fire : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
+        Instantiate(impactEffect, transform.position, transform.rotation);
     }
 }

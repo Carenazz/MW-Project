@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Mana : MonoBehaviour
 {
-
-    private int mana, maxMana = 150, manaRegen;
+    public int mana;
+    private int maxMana = 150, manaRegen;
     private float regenTimer;
 
     public ManaBar manaBar;
@@ -21,18 +21,18 @@ public class Mana : MonoBehaviour
     void Update()
     {
         regenTimer -= Time.deltaTime;
-        if (regenTimer <= 0)
+        if (regenTimer <= 0 && mana <= 145)
         {
             mana += manaRegen;
             regenTimer = 4f;
+            manaBar.SetMana(mana);
         }
     }
 
     public void ManaUsed(int amount)
     {
         mana -= amount;
-        manaBar.SetMana(amount);
-
+        manaBar.SetMana(mana);
     }
 
 }
