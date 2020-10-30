@@ -6258,9 +6258,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 714411745}
+  - {fileID: 2056285631}
   - {fileID: 1497893426}
   - {fileID: 790826719}
-  - {fileID: 2056285631}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7887,7 +7887,7 @@ RectTransform:
   - {fileID: 646769580}
   - {fileID: 1699714369}
   m_Father: {fileID: 304919273}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -9394,7 +9394,7 @@ RectTransform:
   - {fileID: 994639036}
   - {fileID: 476666583}
   m_Father: {fileID: 304919273}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10166,7 +10166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653666889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.93, y: -2.94, z: 0}
+  m_LocalPosition: {x: -5.93, y: -6.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11637,7 +11637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 204839898}
   fireSpell: {fileID: 1898927041069414939, guid: 7d13609d8cbb40e4dacdd25efe9292fa, type: 3}
-  cost: 25
 --- !u!114 &2040184741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11650,6 +11649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ba0e3cb24dd3045bbcc08e77f28215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mana: 0
   manaBar: {fileID: 2056285633}
 --- !u!114 &2040184742
 MonoBehaviour:
@@ -11836,7 +11836,7 @@ RectTransform:
   - {fileID: 213213303}
   - {fileID: 326293103}
   m_Father: {fileID: 304919273}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
