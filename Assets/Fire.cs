@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    public float speed = 9f;
+    public float speed = 9f, timer = 3f;
     public int damage = 20;
     public Rigidbody2D rigid;
     public GameObject impactEffect;
@@ -22,6 +22,5 @@ public class Fire : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
-        Instantiate(impactEffect, transform.position, transform.rotation);
     }
 }

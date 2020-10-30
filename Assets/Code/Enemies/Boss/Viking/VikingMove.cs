@@ -46,11 +46,6 @@ public class VikingMove : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) < dist)
         {
             rb.MovePosition(newPos);
-            anim.SetBool("idle", false);
-        }
-        else
-        {
-            anim.SetBool("idle", true);
         }
     }
     #endregion

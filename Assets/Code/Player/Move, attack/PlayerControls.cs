@@ -283,6 +283,7 @@ public class PlayerControls : MonoBehaviour
         else
         {
             rigid.gravityScale = 2;
+            animator.SetBool("Climber", false);
         }
     }
 
