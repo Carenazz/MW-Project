@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class VikingAI : MonoBehaviour
 {
+    #region variables
     public Transform target;
 
     public float speed, nextWaypointDistance = 3f;
@@ -15,15 +16,19 @@ public class VikingAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    #endregion
 
     void Start()
     {
+        #region Components & Transform.
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        #endregion
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
 
+    #region Path
     void UpdatePath()
     {
         if (seeker.IsDone())
@@ -38,10 +43,11 @@ public class VikingAI : MonoBehaviour
             currentWaypoint = 0;
         }
     }
-
+    #endregion
 
     void FixedUpdate()
     {
+        #region path is null?
         if (path != null)
         {
             if (currentWaypoint >= path.vectorPath.Count)
@@ -55,6 +61,7 @@ public class VikingAI : MonoBehaviour
                 reachEOP = false;
             }
         }
+        #endregion
     }
 
     public void Updater()
