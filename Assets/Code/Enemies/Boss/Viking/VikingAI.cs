@@ -58,7 +58,7 @@ public class VikingAI : MonoBehaviour
     }
 
     public void Updater()
-        {
+    {
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
@@ -70,5 +70,5 @@ public class VikingAI : MonoBehaviour
         {
             currentWaypoint++;
         }
-    })
+    }
 }
