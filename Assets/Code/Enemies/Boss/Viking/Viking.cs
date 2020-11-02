@@ -45,5 +45,4 @@ public class Viking : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
     }
-
 }

@@ -5,6 +5,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    #region Variables
     public Transform target;
 
     public float speed = 6f;
@@ -16,6 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
+    #endregion
 
     private void Start()
     {
