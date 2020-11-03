@@ -81,13 +81,6 @@ public class BossScript : MonoBehaviour
     {
         Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
         rb.velocity = -velocity;
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWp]);
-
-        if (distance < nextWpD)
-        {
-            currentWp++;
-        }
     }
     #endregion
 }

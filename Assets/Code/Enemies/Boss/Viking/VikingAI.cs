@@ -32,7 +32,7 @@ public class VikingAI : MonoBehaviour
     void UpdatePath()
     {
         if (seeker.IsDone())
-            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            seeker.StartPath(rb.position, player.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
@@ -68,12 +68,5 @@ public class VikingAI : MonoBehaviour
     {
         Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
         rb.velocity = -velocity;
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-        if (distance < nextWaypointDistance)
-        {
-            currentWaypoint++;
-        }
     }
 }
