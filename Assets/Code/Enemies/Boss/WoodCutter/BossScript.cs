@@ -79,18 +79,8 @@ public class BossScript : MonoBehaviour
     }
     public void FollowPlayer()
     {
-        // Hvorfor breaker linjen nedenunder spillet? (Question or find potential fix)
-        Vector2 direction = ((Vector2)path.vectorPath[currentWp] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWp]);
-
-        if (distance < nextWpD)
-        {
-            currentWp++;
-        }
+        Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+        rb.velocity = -velocity;
     }
     #endregion
 }

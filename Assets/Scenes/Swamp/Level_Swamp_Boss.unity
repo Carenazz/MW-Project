@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 7
+  speed: 4
   nextWaypointDistance: 3
 --- !u!58 &235382814
 CircleCollider2D:
