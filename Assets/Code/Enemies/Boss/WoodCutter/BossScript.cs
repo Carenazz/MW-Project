@@ -13,7 +13,7 @@ public class BossScript : MonoBehaviour
     Seeker seeker;
     Path path;
 
-    public float speed = 2.5f, nextWpD = 3f;
+    public float speed = 1f, nextWpD = 3f;
     int currentWp = 0;
     bool reachEOP = false;
     public bool isFlipped = false;

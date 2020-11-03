@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32749c6a3994414fa286e352b1d4868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 1
   nextWpD: 3
   isFlipped: 0
 --- !u!114 &235382809
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 4
+  speed: 2
   nextWaypointDistance: 3
 --- !u!58 &235382814
 CircleCollider2D:
