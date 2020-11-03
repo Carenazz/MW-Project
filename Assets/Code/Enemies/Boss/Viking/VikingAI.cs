@@ -6,7 +6,7 @@ using Pathfinding;
 public class VikingAI : MonoBehaviour
 {
     #region variables
-    public Transform target;
+    public Transform player;
 
     public float speed, nextWaypointDistance = 3f;
 
@@ -23,7 +23,7 @@ public class VikingAI : MonoBehaviour
         #region Components & Transform.
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         #endregion
         InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
@@ -66,10 +66,8 @@ public class VikingAI : MonoBehaviour
 
     public void Updater()
     {
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
+        Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+        rb.velocity = -velocity;
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
