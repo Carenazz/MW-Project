@@ -79,6 +79,7 @@ public class BossScript : MonoBehaviour
     }
     public void FollowPlayer()
     {
+        // Hvorfor breaker linjen nedenunder spillet? (Question or find potential fix)
         Vector2 direction = ((Vector2)path.vectorPath[currentWp] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
