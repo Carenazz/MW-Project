@@ -8,7 +8,7 @@ public class ManaBar : MonoBehaviour
     public Slider slider;
     public Mana manaBar;
 
-    void Áwake()
+    void Awake()
     {
         manaBar = FindObjectOfType<Mana>();
     }

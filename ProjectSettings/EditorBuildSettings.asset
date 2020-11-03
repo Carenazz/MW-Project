@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Snow/SMR.unity
     guid: f3b20131a31313046b704fd0e102f744
+  - enabled: 1
+    path: Assets/Scenes/Mixed/R-D-S.unity
+    guid: 48dc315c54f3dfd4498fd1b0a3eff3dd
   m_configObjects: {}
