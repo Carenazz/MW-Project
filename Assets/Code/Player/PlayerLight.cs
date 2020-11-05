@@ -4,18 +4,36 @@ using UnityEngine;
 
 public class PlayerLight : MonoBehaviour
 {
-    PlayerControls player;
+    private bool ena = false;
+    public Transform playerLight;
+    Lighting enabler;
 
-    private void Awake()
+
+    private void Start()
     {
-        player = GetComponent<PlayerControls>();
-
+        enabler = GetComponent<Lighting>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform == player)
+        if (collision.collider == enabler)
         {
-            this.transform.parent = collision.gameObject.transform;
+            if (!ena)
+            {
+                TurnOn();
+            }
+            else if (ena)
+            {
+                TurnOff();
+            }
         }
+    }
+
+    private void TurnOn()
+    {
+        
+    }
+    private void TurnOff()
+    {
+
     }
 }
