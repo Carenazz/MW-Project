@@ -30,6 +30,7 @@ public class PlayerLight : MonoBehaviour
             }
         }
     }
+
     public void TurnOn()
     {
         playerLight.SetActive(true);
