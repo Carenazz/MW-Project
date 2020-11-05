@@ -8,7 +8,7 @@ public class VikingMove : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
 
-    private float speed = 5f, dist = 12f;
+    private float speed = 2f, dist = 12f;
 
     Transform player;
     private bool isFlipped = false;
@@ -41,12 +41,8 @@ public class VikingMove : MonoBehaviour
 
     public void FollowPlayer()
     {
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, player.position) < dist)
-        {
-            rb.MovePosition(newPos);
-        }
+        Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+        rb.velocity = -velocity;
     }
     #endregion
 }
