@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerLight : MonoBehaviour
 {
-    public PlayerControls player;
+    PlayerControls player;
 
-
-    void Start()
+    private void Awake()
     {
-        player = FindObjectOfType<PlayerControls>();    
+        player = GetComponent<PlayerControls>();
+
     }
-
-    void FixedUpdate()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        if (collision.transform == player)
+        {
+            this.transform.parent = collision.gameObject.transform;
+        }
     }
 }

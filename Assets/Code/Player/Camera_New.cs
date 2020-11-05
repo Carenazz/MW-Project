@@ -9,12 +9,10 @@ public class Camera_New : MonoBehaviour
 
     public Vector3 offset;
     private Vector3 lastPlayerPosition;
-    private float distanceToMove;
-    private float yDistance;
+    private float distanceToMove, yDistance;
     public float smoothSpeed = 0.125f;
 
-    public float xMin;
-    public float xMax;
+    public float xMin, xMax;
 
     private void Start()
     {
