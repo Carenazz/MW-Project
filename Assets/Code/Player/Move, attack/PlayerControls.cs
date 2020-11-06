@@ -235,6 +235,8 @@ public class PlayerControls : MonoBehaviour
 
     void Jump()
     {
+        // Make jumping a bit more easy and not point precision.
+
         RaycastHit2D platInfo = Physics2D.Raycast(transform.position, Vector2.down, pDist, whatIsPlatform);
 
         if (platInfo.collider != null)
