@@ -57,7 +57,7 @@ public class EnemyScript : MonoBehaviour
                 {
                     if (hitInfo.collider.transform.tag == "Player")
                     {
-                        timer = 1;
+                        timer = 2 / timeBetweenAttacks;
 
                         animator.SetTrigger("Attack");
                     }

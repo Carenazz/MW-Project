@@ -41,8 +41,11 @@ public class VikingMove : MonoBehaviour
 
     public void FollowPlayer()
     {
-        Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
-        rb.velocity = -velocity;
+        if (player.position.y < dist)
+        {
+            Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+            rb.velocity = -velocity;
+        }
     }
     #endregion
 }

@@ -7,8 +7,7 @@ public class Viking : StateMachineBehaviour
 
     #region Variables
     [SerializeField]
-    private float speed = 2.5f, attackRange = 3f;
-    private bool isDead = false;
+    private float attackRange = 3f;
 
     Transform player;
 

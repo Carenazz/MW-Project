@@ -148,7 +148,7 @@ public class PlayerControls : MonoBehaviour
             isJumping = false;
             animator.SetBool("Jumping", false);
             isClimbing = false;
-            animator.SetBool("Climbing", false);
+            animator.SetBool("Climber", false);
         }
 
         if (collision.transform.tag == "mPlatform")
