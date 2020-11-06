@@ -14961,12 +14961,20 @@ PrefabInstance:
       value: PlayerLight
       objectReference: {fileID: 0}
     - target: {fileID: 7155786626241430645, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
+      propertyPath: m_ShadowVolumeIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155786626241430645, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7155786626241430645, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[3]
       value: 1275637369
+      objectReference: {fileID: 0}
+    - target: {fileID: 7155786626241430645, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[4]
+      value: 82173947
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
