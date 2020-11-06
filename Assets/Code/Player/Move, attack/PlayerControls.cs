@@ -169,7 +169,7 @@ public class PlayerControls : MonoBehaviour
         #region levelskips
         if (collision.transform.tag == "dSkip")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+            SceneManager.LoadScene(8);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
         }
         if (collision.transform.tag == "mSkip")

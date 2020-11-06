@@ -15,6 +15,7 @@ TagManager:
   - mPlatform
   - Trap
   - LightsTrigger
+  - MoveWall
   layers:
   - Default
   - TransparentFX
