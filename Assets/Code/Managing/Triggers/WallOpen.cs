@@ -11,18 +11,15 @@ public class WallOpen : MonoBehaviour
     private float speed = 2f;
     private bool moved = false;
 
-    Enabler enable;
     public Transform target;
+    public LayerMask whatIsPlayer;
     #endregion
-
-    void Start()
-    {
-        enable = GetComponent<Enabler>();
-    }
 
     void Update()
     {
-        if (enable.Button())
+        RaycastHit2D playerInfo = Physics2D.Raycast(transform.position, Vector2.up, 0.5f, whatIsPlayer);
+
+        if (Input.GetKeyDown(KeyCode.E) && playerInfo == GameObject.FindGameObjectWithTag("Player"))
         {
             Move();
         }
