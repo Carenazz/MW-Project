@@ -42,7 +42,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField]
     private bool isPressing, isGrounded, isClimbing, isJumping;
     [SerializeField]
-    private float bTimer = 0f, jTimer = 0f, rTimer = 10f;
+    private float bTimer = 0f, rTimer = 10f;
     #endregion
 
     #region Components and Layermasks
@@ -109,8 +109,11 @@ public class PlayerControls : MonoBehaviour
             }
             else
             {
-                bTimer -= Time.deltaTime;
-                if (bTimer <= 0)
+                if (bTimer >= 0f)
+                {
+                    bTimer -= Time.deltaTime;
+                }
+                else if (bTimer <= 0)
                 {
                     isPressing = false;
                     animator.SetBool("Button", false);

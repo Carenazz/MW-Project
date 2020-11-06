@@ -8,9 +8,17 @@ public class VikingAttack : MonoBehaviour
     public int attackDamage = 30;
 
     public Vector3 attackOffset;
-    public float attackRange = 1f;
+    public float attackRange = 1f, timer = 2f, timeBAtt = 2f;
     public LayerMask attackMask;
     #endregion
+
+    private void Update()
+    {
+        if (timer >= 0f)
+        {
+            timer -= Time.deltaTime;    
+        }
+    }
 
     public void Attack()
     {
@@ -18,10 +26,14 @@ public class VikingAttack : MonoBehaviour
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
 
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-        if (colInfo != null)
+        if (timer <= 0f)
         {
-            colInfo.GetComponent<PlayerControls>().TakeDamage(attackDamage);
+            Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+            if (colInfo != null)
+            {
+                colInfo.GetComponent<PlayerControls>().TakeDamage(attackDamage);
+                timer = 5f / timeBAtt;
+            }
         }
     }
 }

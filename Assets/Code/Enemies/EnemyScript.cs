@@ -12,7 +12,7 @@ public class EnemyScript : MonoBehaviour
     public Animator animator;
 
     [SerializeField]
-    private float timeBetweenAttacks = 0f, distance = 0.5f, detectDistance = 2f, timer = 0f;
+    private float timeBetweenAttacks = 1.5f, distance = 0.5f, detectDistance = 2f, timer = 0f;
 
     public int attackDamage = 20;
     private bool isDead = false;
