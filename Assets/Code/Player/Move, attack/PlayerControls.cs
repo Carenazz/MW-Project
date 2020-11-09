@@ -158,30 +158,6 @@ public class PlayerControls : MonoBehaviour
         {
             this.transform.parent = collision.gameObject.transform;
         }
-        if (collision.transform.tag == "Finish")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            transform.position = GameObject.FindWithTag("Spawner").transform.position;
-            currentHealth = currentHealth + 20;
-            healthBar.SetHealth(currentHealth);
-        }
-
-        #region levelskips
-        if (collision.transform.tag == "dSkip")
-        {
-            SceneManager.LoadScene(8);
-            transform.position = GameObject.FindWithTag("Spawner").transform.position;
-        }
-        if (collision.transform.tag == "mSkip")
-        {
-            SceneManager.LoadScene(6);
-        }
-        if (collision.transform.tag == "SnowSkip")
-        {
-            SceneManager.LoadScene(7);
-        }
-        #endregion
-
     }
 
     private void OnCollisionExit2D(Collision2D collision)
