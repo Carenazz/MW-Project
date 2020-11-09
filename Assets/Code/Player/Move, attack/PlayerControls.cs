@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
@@ -46,10 +45,13 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     #region Components and Layermasks
+    // Components
+    LevelColl scenes;
+    SpriteRenderer SRender;
+    
     // Animations
 
     public Animator animator;
-    SpriteRenderer SRender;
 
     // Layer Masks
 
@@ -81,6 +83,7 @@ public class PlayerControls : MonoBehaviour
         SRender = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         weapon = GetComponent<Weapon>();
+        scenes = GetComponent<LevelColl>();
         #endregion
 
         DontDestroyOnLoad(this.gameObject);
@@ -330,7 +333,7 @@ public class PlayerControls : MonoBehaviour
         finalDeath -= Time.deltaTime;
         if (finalDeath <= 0)
         {
-            SceneManager.LoadScene("Menu");
+            scenes.BackToMenu();
             Destroy(gameObject);
         }
     }

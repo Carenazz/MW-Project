@@ -27,6 +27,11 @@ public class LevelColl : MonoBehaviour
         {
             SceneManager.LoadScene(7);
         }
-                #endregion
+        #endregion
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
