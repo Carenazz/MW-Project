@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4805103729464969358}
   - component: {fileID: 6253269497473999906}
   m_Layer: 0
-  m_Name: Barrel
+  m_Name: Barrel_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 7652570202239042450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.0283284, y: -1.3744724, z: 5.8367267}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
