@@ -5,12 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LevelColl : MonoBehaviour
 {
+    PlayerControls hp;
+    
+    private void Start()
+    {
+        hp = GetComponent<PlayerControls>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Finish")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
+            hp.Healed(20);
         }
 
         #region levelskips
