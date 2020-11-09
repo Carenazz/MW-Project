@@ -39,6 +39,7 @@ public class VikingMove : MonoBehaviour
         }
     }
 
+    // Mål: Lave follow om så han ikke "teleporter" til dig og løber hurtigere i længere afstande.
     public void FollowPlayer()
     {
         if (player.position.y < dist)
