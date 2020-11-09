@@ -557,7 +557,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384238259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.66, y: 4.41, z: 0}
+  m_LocalPosition: {x: -25.66, y: 4.41, z: 75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463699162}
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  target: {fileID: 0}
+  target: {fileID: 753118182}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -15694,7 +15694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085273184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.09, y: -2.85, z: 0}
+  m_LocalPosition: {x: 45.09, y: -2.85, z: 60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 657670514}
