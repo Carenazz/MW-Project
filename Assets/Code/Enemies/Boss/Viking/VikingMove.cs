@@ -10,12 +10,14 @@ public class VikingMove : MonoBehaviour
 
     private float speed = 2f, dist = 12f;
 
+    VikingHP hp;
     Transform player;
     private bool isFlipped = false;
     #endregion
 
     void Start()
     {
+        hp = GetComponent<VikingHP>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -42,10 +44,13 @@ public class VikingMove : MonoBehaviour
     // Mål: Lave follow om så han ikke "teleporter" til dig og løber hurtigere i længere afstande.
     public void FollowPlayer()
     {
-        if (player.position.y < dist)
+        if (!hp.dead)
         {
-            Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
-            rb.velocity = -velocity;
+            if (player.position.y < dist)
+            {
+                Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+                rb.velocity = -velocity;
+            }
         }
     }
     #endregion

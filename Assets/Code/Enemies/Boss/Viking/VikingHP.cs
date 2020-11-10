@@ -8,6 +8,7 @@ public class VikingHP : MonoBehaviour
     [SerializeField]
     private int currentHealth, maxHealth = 800, regen;
     public float regenTimer;
+    public bool dead = false;
 
     #region Components
     Animator anim;
@@ -66,7 +67,7 @@ public class VikingHP : MonoBehaviour
     void Die()
     {
         anim.SetBool("Death", true);
-
+        dead = true;
         if (viking.enabled == true)
         {
             viking.enabled = false;
