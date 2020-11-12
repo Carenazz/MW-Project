@@ -17,7 +17,7 @@ public class WallOpen : MonoBehaviour
 
     void Update()
     {
-        RaycastHit2D playerInfo = Physics2D.Raycast(transform.position, Vector2.up, 0.5f, whatIsPlayer);
+        RaycastHit2D playerInfo = Physics2D.Raycast(transform.position, Vector2.down, 0.5f, whatIsPlayer);
 
         if (Input.GetKeyDown(KeyCode.E) && playerInfo == GameObject.FindGameObjectWithTag("Player"))
         {
