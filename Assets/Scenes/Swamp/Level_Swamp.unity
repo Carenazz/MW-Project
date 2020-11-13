@@ -15626,6 +15626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_0
       objectReference: {fileID: 0}
+    - target: {fileID: 6723426464341043560, guid: c0c277f9e43858241a3ccc9771bd0ef1, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6723426464341043563, guid: c0c277f9e43858241a3ccc9771bd0ef1, type: 3}
       propertyPath: m_RootOrder
       value: 0
