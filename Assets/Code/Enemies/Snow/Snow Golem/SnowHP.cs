@@ -11,7 +11,7 @@ public class SnowHP : MonoBehaviour
     AIPath path;
     Seeker seek;
     Animator anim;
-
+    Rigidbody2D rb;
 
     void Start()
     {
@@ -19,6 +19,7 @@ public class SnowHP : MonoBehaviour
         anim = GetComponent<Animator>();
         path = GetComponent<AIPath>();
         seek = GetComponent<Seeker>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -29,7 +30,7 @@ public class SnowHP : MonoBehaviour
             path.enabled = false;
             seek.enabled = false;
             anim.SetBool("Death", true);
-            
+            rb.gravityScale = 2;   
         }
     }
 
