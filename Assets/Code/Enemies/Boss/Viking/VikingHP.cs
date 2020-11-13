@@ -15,6 +15,7 @@ public class VikingHP : MonoBehaviour
     VikingMove viking;
     Enabler enable;
     public GameObject key;
+    Collider2D coll;
     #endregion
 
     void Start()
@@ -27,6 +28,7 @@ public class VikingHP : MonoBehaviour
         anim = GetComponent<Animator>();
         viking = GetComponent<VikingMove>();
         enable = key.GetComponent<Enabler>();
+        coll = GetComponent<Collider2D>();
         #endregion
     }
 
@@ -72,6 +74,7 @@ public class VikingHP : MonoBehaviour
         {
             viking.enabled = false;
             enable.Enabled();
+            coll.enabled = !coll.enabled;
         }
     }
     #endregion
