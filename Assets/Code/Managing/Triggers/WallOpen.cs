@@ -5,13 +5,13 @@ using UnityEngine;
 public class WallOpen : MonoBehaviour
 {
     #region variables
-    Vector3 startPos;
 
     [SerializeField]
     private float speed = 2f;
     private bool moved = false;
 
-    public Transform target;
+    public GameObject target;
+
     public LayerMask whatIsPlayer;
     #endregion
 
@@ -27,16 +27,14 @@ public class WallOpen : MonoBehaviour
 
     public void Move()
     {
-        float step = speed * Time.deltaTime;
-
         if (!moved)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+            target.SetActive(false);
             moved = true;
         }
         else if (moved)
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPos, step);
+            target.SetActive(true);
             moved = false;
         }
     }
