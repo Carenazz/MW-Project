@@ -100,6 +100,8 @@ public class PlayerControls : MonoBehaviour
         {
             if (isPressing == false)
             {
+
+                #region movement system
                 Move();
 
                 Pushing();
@@ -107,6 +109,7 @@ public class PlayerControls : MonoBehaviour
                 Climbing();
 
                 Jump();
+                #endregion
 
                 PButton();
 
@@ -114,6 +117,7 @@ public class PlayerControls : MonoBehaviour
             }
             else
             {
+                #region button Timer
                 if (bTimer >= 0f)
                 {
                     bTimer -= Time.deltaTime;
@@ -123,14 +127,18 @@ public class PlayerControls : MonoBehaviour
                     isPressing = false;
                     animator.SetBool("Button", false);
                 }
+                #endregion
             }
+            #region RegenTimer
             if (rTimer <= 0)
             {
                 rTimer = 10f;
                 Regeneration();
             }
+            #endregion
         }
 
+        #region Life handler and death
         else if (currentHealth <= 0 && maxLives != 1)
         {
             Dying();
@@ -139,11 +147,14 @@ public class PlayerControls : MonoBehaviour
         {
             PermaDeath();
         }
+        #endregion
 
+        #region Currenthealth max Limits
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth; 
         }
+        #endregion
     }
 
     #region Collision and interactions
