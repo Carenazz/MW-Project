@@ -48,6 +48,7 @@ public class PlayerControls : MonoBehaviour
     // Components
     LevelColl scenes;
     SpriteRenderer SRender;
+    Collider2D mcoll;
     
     // Animations
 
@@ -84,6 +85,7 @@ public class PlayerControls : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         weapon = GetComponent<Weapon>();
         scenes = GetComponent<LevelColl>();
+        mcoll = GetComponent<Collider2D>();
         #endregion
 
         DontDestroyOnLoad(this.gameObject);
@@ -314,6 +316,7 @@ public class PlayerControls : MonoBehaviour
         if (deathTimer > 0)
         {
             deathTimer -= Time.deltaTime;
+            mcoll.enabled = !mcoll.enabled;
         }
         else if (deathTimer <= 0)
         {
@@ -324,6 +327,7 @@ public class PlayerControls : MonoBehaviour
             maxLives--;
             transform.position = GameObject.FindWithTag("Respawn").transform.position;
             weapon.enabled = true;
+            mcoll.enabled = true;
         }
     }
 

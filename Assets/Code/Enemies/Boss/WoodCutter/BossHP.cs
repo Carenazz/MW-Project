@@ -16,6 +16,7 @@ public class BossHP : MonoBehaviour
 
     public GameObject key;
 
+    Collider2D collm;
     BossScript enemy;
     #endregion
 
@@ -24,7 +25,7 @@ public class BossHP : MonoBehaviour
         currentHealth = maxHealth;
         enemy = GetComponent<BossScript>();
         enable = key.GetComponent<Enabler>();
-
+        collm = GetComponent<Collider2D>();
     }
 
     #region Health System
@@ -50,6 +51,7 @@ public class BossHP : MonoBehaviour
             enemy.enabled = false;
             enable.Enabled();
         }
+        collm.enabled = !collm.enabled;
     }
     #endregion
 }
