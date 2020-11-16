@@ -34,6 +34,7 @@ public class Spells : MonoBehaviour
             timer -= Time.deltaTime;
     }
 
+    // Mål: Sørg for animations til firespell + at den ikke bliver ved med at travelle efter impact.
     void Shoot()
     {
         Instantiate(fireSpell, firePoint.position, firePoint.rotation);
