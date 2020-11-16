@@ -6,7 +6,6 @@ public class VikingMove : MonoBehaviour
 {
     #region Variables
     Rigidbody2D rb;
-    Animator anim;
 
     private float speed = 2f, dist = 12f;
 
@@ -46,10 +45,11 @@ public class VikingMove : MonoBehaviour
     {
         if (!hp.dead)
         {
-            if (player.position.y < dist)
+            Vector2 target = new Vector2(player.position.x, rb.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, player.position) < dist)
             {
-                Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
-                rb.velocity = -velocity;
+                rb.MovePosition(newPos);
             }
         }
     }
