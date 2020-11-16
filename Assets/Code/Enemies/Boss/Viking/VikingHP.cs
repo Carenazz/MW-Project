@@ -37,7 +37,7 @@ public class VikingHP : MonoBehaviour
         if (currentHealth > 0)
         {
             regenTimer  -= Time.deltaTime;
-            if (regenTimer <= 0 && currentHealth <= 795)
+            if (regenTimer <= 0 && currentHealth <= (maxHealth - 5))
             {
                 Regenerate();
                 regenTimer = 5f;

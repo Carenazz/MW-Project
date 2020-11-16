@@ -7,6 +7,7 @@ public class VikingMove : MonoBehaviour
     #region Variables
     Rigidbody2D rb;
 
+    [SerializeField]
     private float speed = 2f, dist = 12f;
 
     VikingHP hp;
@@ -45,11 +46,10 @@ public class VikingMove : MonoBehaviour
     {
         if (!hp.dead)
         {
-            Vector2 target = new Vector2(player.position.x, rb.position.y);
-            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, player.position) < dist)
             {
-                rb.MovePosition(newPos);
+                Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
+                rb.velocity = -velocity;
             }
         }
     }
