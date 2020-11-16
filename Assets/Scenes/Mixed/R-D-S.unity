@@ -3200,6 +3200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  timer: 1.5
   target: {fileID: 772877987}
   whatIsPlayer:
     serializedVersion: 2
@@ -3436,7 +3437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404362609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.267, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 585538720}
@@ -5628,6 +5629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  timer: 1.5
   target: {fileID: 753118181}
   whatIsPlayer:
     serializedVersion: 2
@@ -19882,11 +19884,11 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 0.75
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -11.848213, y: -0.83964753, z: 0}
-  - {x: 14.345619, y: -0.73975086, z: 0}
+  - {x: -11.330467, y: -0.4581542, z: 0}
+  - {x: 13.909622, y: -0.44000626, z: 0}
   - {x: 13.905373, y: -0.24139953, z: 0}
   - {x: -11.283806, y: -0.18609881, z: 0}
 --- !u!4 &1315993543
@@ -24139,6 +24141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  timer: 1.5
   target: {fileID: 383756656}
   whatIsPlayer:
     serializedVersion: 2
