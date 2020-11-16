@@ -100,7 +100,6 @@ public class PlayerControls : MonoBehaviour
         {
             if (isPressing == false)
             {
-
                 #region movement system
                 Move();
 
