@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class Mana : MonoBehaviour
 {
+    #region Mana
     public int mana;
     private int maxMana = 150, manaRegen;
     private float regenTimer;
-
     public ManaBar manaBar;
+    #endregion
 
     void Start()
     {
@@ -20,6 +21,7 @@ public class Mana : MonoBehaviour
 
     void Update()
     {
+        #region Mana regen
         regenTimer -= Time.deltaTime;
         if (regenTimer <= 0 && mana <= 145)
         {
@@ -27,6 +29,7 @@ public class Mana : MonoBehaviour
             regenTimer = 4f;
             manaBar.SetMana(mana);
         }
+        #endregion
     }
 
     public void ManaUsed(int amount)
