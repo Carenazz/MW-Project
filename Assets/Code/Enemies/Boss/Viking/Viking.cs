@@ -7,7 +7,7 @@ public class Viking : StateMachineBehaviour
 
     #region Variables
     [SerializeField]
-    private float attackRange = 3f, float timer = 3f;
+    private float attackRange = 3f, timer = 3f;
 
     Transform player;
 
