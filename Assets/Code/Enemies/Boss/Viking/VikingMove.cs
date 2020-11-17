@@ -6,6 +6,7 @@ public class VikingMove : MonoBehaviour
 {
     #region Variables
     Rigidbody2D rb;
+    Animator anim;
 
     [SerializeField]
     private float speed = 2f, dist = 12f;
@@ -20,6 +21,7 @@ public class VikingMove : MonoBehaviour
         hp = GetComponent<VikingHP>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     #region Follow & Look for Statemachine
@@ -49,13 +51,15 @@ public class VikingMove : MonoBehaviour
             {
                 Vector3 direction = player.position - this.transform.position;
                 direction.y = 0;
+                anim.SetBool("Idle", false);
             }
 
-            if (Vector3.Distance(player.position, transform.position) < 20)
+            if (Vector3.Distance(player.position, transform.position) < dist)
             {
                 Vector3 direction = player.position - this.transform.position;
                 direction.y = 0;
                 transform.position += direction.normalized * speed * Time.deltaTime;
+                anim.SetBool("Idle", true);
             }
         }
     }
