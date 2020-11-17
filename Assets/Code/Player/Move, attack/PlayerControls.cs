@@ -54,8 +54,9 @@ public class PlayerControls : MonoBehaviour
 
     public Animator animator;
 
-    // Layer Masks
+    // Layer Masks & transforms
 
+    public Transform jumpPoint;
     public LayerMask whatIsLadder, whatIsPlatform, whatIsPushable, whatIsButton;
     #endregion
 
@@ -231,7 +232,7 @@ public class PlayerControls : MonoBehaviour
     {
         // Make jumping a bit more easy and not point precision.
 
-        RaycastHit2D platInfo = Physics2D.Raycast(transform.position, Vector2.down, pDist, whatIsPlatform);
+        RaycastHit2D platInfo = Physics2D.Raycast(jumpPoint.position, Vector2.left, pDist, whatIsPlatform);
 
         if (platInfo.collider != null)
         {
