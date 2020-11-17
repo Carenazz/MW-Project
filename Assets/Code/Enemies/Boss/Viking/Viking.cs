@@ -7,7 +7,7 @@ public class Viking : StateMachineBehaviour
 
     #region Variables
     [SerializeField]
-    private float attackRange = 3f;
+    private float attackRange = 3f, float timer = 3f;
 
     Transform player;
 
@@ -33,9 +33,14 @@ public class Viking : StateMachineBehaviour
         #endregion
 
         #region Attack
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
         {
             animator.SetTrigger("Attack");
+            timer = 3f;
+        }
+        else
+        {
+            timer -= Time.deltaTime;
         }
         #endregion
     }
