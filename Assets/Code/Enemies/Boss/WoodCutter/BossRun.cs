@@ -6,7 +6,8 @@ using UnityEngine;
 public class BossRun : StateMachineBehaviour
 {
     #region variables
-    public float speed = 2.5f, attackRange = 3f;
+    [SerializeField]
+    private float speed = 2.5f, attackRange = 3f, timer = 2f;
     private bool isDead = false;
 
     Transform player;
@@ -37,9 +38,14 @@ public class BossRun : StateMachineBehaviour
         #endregion
 
         #region Attack
-        if (Vector2.Distance(player.position, rb.position) <= attackRange)
+        if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
         {
             animator.SetTrigger("Attacking");
+            timer = 2f;
+        }
+        else
+        {
+            timer -= Time.deltaTime;
         }
         #endregion
     }
