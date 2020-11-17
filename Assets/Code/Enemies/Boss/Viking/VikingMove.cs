@@ -41,17 +41,23 @@ public class VikingMove : MonoBehaviour
         }
     }
 
-    // Mål: Lave follow om så han ikke "teleporter" til dig og løber hurtigere i længere afstande.
     public void FollowPlayer()
     {
         if (!hp.dead)
         {
-            if (Vector2.Distance(transform.position, player.position) < dist)
+            if (Vector3.Distance(player.position, transform.position) > dist)
             {
-                Vector2 velocity = new Vector2((transform.position.x - player.position.x) * speed, (transform.position.y - player.position.y) * speed);
-                rb.velocity = -velocity;
+                Vector3 direction = player.position - this.transform.position;
+                direction.y = 0;
+            }
+
+            if (Vector3.Distance(player.position, transform.position) < 20)
+            {
+                Vector3 direction = player.position - this.transform.position;
+                direction.y = 0;
+                transform.position += direction.normalized * speed * Time.deltaTime;
             }
         }
     }
-    #endregion
+        #endregion
 }
