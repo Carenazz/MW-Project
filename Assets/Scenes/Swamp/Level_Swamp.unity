@@ -137,7 +137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7155786626241430640, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7155786626241430640, guid: afd262bd9395e47438422fe74a5f7896, type: 3}
       propertyPath: m_LocalPosition.x
@@ -239,7 +239,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371501382}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105240444
 GameObject:
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 108406366}
   - component: {fileID: 108406365}
   - component: {fileID: 108406367}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_39 (1)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -6550,8 +6550,8 @@ Transform:
   m_Children:
   - {fileID: 795971524}
   - {fileID: 358507235}
-  - {fileID: 67935028}
   - {fileID: 94998025}
+  - {fileID: 67935028}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6569,7 +6569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpSpeed: 7
   jDistance: 0.5
-  pDist: 0.5
+  pDist: 0.15
   speed: 7
   movement: 0
   healthBar: {fileID: 714411747}
@@ -7730,7 +7730,7 @@ GameObject:
   - component: {fileID: 680883314}
   - component: {fileID: 680883313}
   - component: {fileID: 680883315}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Tile_39
   m_TagString: Platform
   m_Icon: {fileID: 0}
