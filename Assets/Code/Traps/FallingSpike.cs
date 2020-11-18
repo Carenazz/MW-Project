@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class FallingSpike : MonoBehaviour
 {
-    private float timer = 5f;
     private int damage = 50;
-    private bool triggered = false;
 
     Rigidbody2D rb;
     Animator anim;
@@ -17,15 +15,6 @@ public class FallingSpike : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
-    void Update()
-    {
-        if (timer <= 0f)
-        {
-            this.enabled = false;
-        }
-    }
-
     void Triggered()
     {
         rb.gravityScale = 4;
@@ -38,6 +27,10 @@ public class FallingSpike : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GetComponent<PlayerControls>().TakeDamage(damage);
+        }
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            this.enabled = false;
         }
     }
 
