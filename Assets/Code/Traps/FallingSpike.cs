@@ -6,31 +6,33 @@ public class FallingSpike : MonoBehaviour
 {
     private int damage = 50;
 
+    PlayerControls hp;
     Rigidbody2D rb;
     Animator anim;
     public Transform target;
+    public Transform rayT;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        hp = GetComponent<PlayerControls>();
     }
     void Triggered()
     {
         rb.gravityScale = 4;
         anim.SetTrigger("Triggered");
-        timer -= Time.deltaTime;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        RaycastHit2D hitInfo = Physics2D.Raycast(rayT.position, Vector2.left, 0.2f);
+        if (hitInfo.collider != null)
         {
-            GetComponent<PlayerControls>().TakeDamage(damage);
-        }
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            this.enabled = false;
+            if (hitInfo.collider.transform.tag == "Player")
+            {
+                hp.TakeDamage(damage);
+            }
         }
     }
 
