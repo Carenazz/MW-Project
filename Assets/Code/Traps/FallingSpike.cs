@@ -10,6 +10,7 @@ public class FallingSpike : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    public Transform target;
 
     void Start()
     {
@@ -19,10 +20,6 @@ public class FallingSpike : MonoBehaviour
 
     void Update()
     {
-        if (triggered)
-        {
-            Triggered();
-        }
         if (timer <= 0f)
         {
             this.enabled = false;
@@ -41,6 +38,14 @@ public class FallingSpike : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GetComponent<PlayerControls>().TakeDamage(damage);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            Triggered();
         }
     }
 }
