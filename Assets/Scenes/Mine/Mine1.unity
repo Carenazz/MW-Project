@@ -6270,9 +6270,9 @@ GameObject:
   - component: {fileID: 785774148}
   - component: {fileID: 785774147}
   - component: {fileID: 785774146}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 2 (1)
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29377,9 +29377,9 @@ GameObject:
   - component: {fileID: 1320665524}
   - component: {fileID: 1320665523}
   - component: {fileID: 1320665522}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: 2
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
