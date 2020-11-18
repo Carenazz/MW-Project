@@ -6,8 +6,8 @@ public class Hyena : StateMachineBehaviour
 {
 
     #region Variables
-    public float speed = 0f;
-    public float attackRange = 1.5f;
+    [SerializeField]
+    private float speed = 0f, attackRange = 1.5f, timer = 1f;
 
     Transform player;
     Rigidbody2D rb;
@@ -38,9 +38,14 @@ public class Hyena : StateMachineBehaviour
             #endregion
 
             #region Attack
-            if (Vector2.Distance(player.position, rb.position) <= attackRange)
+            if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
             {
                 animator.SetTrigger("Attacking");
+                timer = 1f;
+            }
+            else
+            {
+                timer -= Time.deltaTime;
             }
             #endregion
         }

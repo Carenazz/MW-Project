@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Vulture : StateMachineBehaviour
 {
-    public float speed = 2.5f;
-    public float attackRange = 1.5f;
+    [SerializeField]
+    private float speed = 2.5f, attackRange = 1.5f, timer = 1.2f;
 
     VultureMovement move;
     Rigidbody2D rb;
@@ -26,18 +26,25 @@ public class Vulture : StateMachineBehaviour
     {
         if (hp.currentHealth > 0)
         {
-
+            #region movement region
             move.LookAtPlayer();
 
             move.Follow();
 
             animator.SetFloat("Speed", Mathf.Abs(speed));
+            #endregion
 
-            if (Vector2.Distance(player.position, rb.position) <= attackRange)
+            #region Attack Region
+            if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
             {
                 animator.SetTrigger("Attack");
-
+                timer = 1.2f;
             }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
+            #endregion
         }
         else if (hp.currentHealth <= 0)
         {
