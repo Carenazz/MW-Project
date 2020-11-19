@@ -29,7 +29,7 @@ public class FallingSpike : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(rayT.position, Vector2.left, 0.2f);
         if (hitInfo.collider != null)
         {
-            if (hitInfo == GameObject.FindGameObjectWithTag("Player")
+            if (hitInfo == GameObject.FindGameObjectWithTag("Player"))
             {
                 hp.TakeDamage(damage);
             }
