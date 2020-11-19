@@ -35,6 +35,10 @@ public class FallingSpike : MonoBehaviour
             {
                 hp.TakeDamage(damage);
             }
+            if (hitInfo.transform.CompareTag("Platform"))
+            {
+                Destroy(this);
+            }
         }
     }
 
