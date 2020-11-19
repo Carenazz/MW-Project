@@ -11,12 +11,14 @@ public class FallingSpike : MonoBehaviour
     Animator anim;
     public Transform target;
     public Transform rayT;
+    private Transform player;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        hp = GetComponent<PlayerControls>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        hp = player.GetComponent<PlayerControls>();
     }
     void Triggered()
     {
