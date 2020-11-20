@@ -33,7 +33,7 @@ public class LevelColl : MonoBehaviour
         }
         if (collision.transform.tag == "SnowSkip")
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(9);
         }
         #endregion
     }

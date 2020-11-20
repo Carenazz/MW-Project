@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mixed/R-D-S.unity
     guid: 48dc315c54f3dfd4498fd1b0a3eff3dd
+  - enabled: 1
+    path: Assets/Scenes/Mixed/Swamp-Mine.unity
+    guid: e84a11d3974b27c4aa9c044283ec5d8b
   m_configObjects: {}
