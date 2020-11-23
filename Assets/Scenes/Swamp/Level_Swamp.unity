@@ -8792,6 +8792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 4244653496752769539, guid: 3c1b89880e061f2449367c0acf78a979, type: 3}
+      propertyPath: itemButton
+      value: 
+      objectReference: {fileID: 8347217923643867284, guid: 9eeaeb55f31efa042916660f55ebdedb, type: 3}
     - target: {fileID: 4244653496752769542, guid: 3c1b89880e061f2449367c0acf78a979, type: 3}
       propertyPath: m_RootOrder
       value: 0
