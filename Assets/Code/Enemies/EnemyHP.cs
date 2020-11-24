@@ -6,7 +6,7 @@ public class EnemyHP : MonoBehaviour
 {
     public Animator animator;
 
-    public int maxHealth = 100, currentHealth;
+    public double maxHealth = 100, currentHealth;
 
     #region Components
     Rigidbody2D rigid;
@@ -27,7 +27,7 @@ public class EnemyHP : MonoBehaviour
     }
 
     #region Damage / Death
-    public void TakeDamage(int damage)
+    public void TakeDamage(double damage)
     {
         currentHealth -= damage;
 
