@@ -12,13 +12,13 @@ public class HealthBar : MonoBehaviour
     {
         playerBar = FindObjectOfType<PlayerControls>();
     }
-    public void SetMaxHealth(int health)
+    public void SetMaxHealth(double health)
     {
         slider.maxValue = health;
         slider.value = health;
     }
 
-    public void SetHealth (int health)
+    public void SetHealth (double health)
     {
         slider.value = health;
 

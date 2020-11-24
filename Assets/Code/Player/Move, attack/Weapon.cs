@@ -16,11 +16,11 @@ public class Weapon : MonoBehaviour
 
     // Normal attack
     public float attackRange = 0.5f;
-    public double attackDamage = 20;
+    public int attackDamage = 20;
 
     // Strong attack
     public float sAttRange = 0.75f;
-    public double sDamage = 50;
+    public int sDamage = 50;
 
     // Attack Timers
     public float attackRate = 1.5f;

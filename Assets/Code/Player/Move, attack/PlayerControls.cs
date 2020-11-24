@@ -23,7 +23,7 @@ public class PlayerControls : MonoBehaviour
     public HealthBar healthBar;
 
     [SerializeField]
-    private double maxHealth = 100, currentHealth, maxLives;
+    private int maxHealth = 100, currentHealth, maxLives;
     private float finalDeath, deathTimer;
 
     #endregion
