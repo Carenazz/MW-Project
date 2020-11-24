@@ -66,8 +66,7 @@ public class PlayerControls : MonoBehaviour
 
     #region stats
 
-    public float agility = 1;
-    public int hpPercent = 1, regenBuff = 1;
+    Stats stats;
 
     #endregion
 
@@ -94,6 +93,7 @@ public class PlayerControls : MonoBehaviour
         weapon = GetComponent<Weapon>();
         scenes = GetComponent<LevelColl>();
         mcoll = GetComponent<Collider2D>();
+        stats = GetComponent<Stats>();
         #endregion
 
         DontDestroyOnLoad(this.gameObject);
@@ -157,9 +157,9 @@ public class PlayerControls : MonoBehaviour
         #endregion
 
         #region Currenthealth max Limits
-        if (currentHealth > maxHealth)
+        if (currentHealth > maxHealth * stats.hpP)
         {
-            currentHealth = maxHealth * hpPercent; 
+            currentHealth = maxHealth * stats.hpP; 
         }
         #endregion
     }
@@ -223,13 +223,13 @@ public class PlayerControls : MonoBehaviour
 
             if (movement > 0f)
             {
-                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed * stats.agility, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, 0, 0);
 
             }
             else if (movement < 0f)
             {
-                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed * stats.agility, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, -180, 0);
             }
         }
@@ -323,7 +323,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Regeneration()
     {
-        currentHealth += 5 * regenBuff;
+        currentHealth += 5 * stats.regenP;
         healthBar.SetHealth(currentHealth);
     }
     
