@@ -27,7 +27,7 @@ public class EnemyHP : MonoBehaviour
     }
 
     #region Damage / Death
-    public void TakeDamage(double damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

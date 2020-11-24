@@ -6598,7 +6598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64252e0f2c4573842ba558011108524d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 7
+  jumpSpeed: 2
   jDistance: 0.5
   pDist: 0.15
   speed: 7
@@ -6632,7 +6632,7 @@ MonoBehaviour:
     m_Bits: 65536
   hpP: 1
   regenP: 1
-  agility: 1.1
+  agility: 2
 --- !u!114 &371501384
 MonoBehaviour:
   m_ObjectHideFlags: 0

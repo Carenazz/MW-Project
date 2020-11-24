@@ -66,8 +66,8 @@ public class PlayerControls : MonoBehaviour
 
     #region stats
 
-    public int hpP = 1, regenP = 1;
-    public float agility = 1.2f;
+    public int stamina = 1, regenP = 1;
+    public float agility = 1f;
 
     #endregion
 
@@ -223,13 +223,13 @@ public class PlayerControls : MonoBehaviour
 
             if (movement > 0f)
             {
-                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, 0, 0);
 
             }
             else if (movement < 0f)
             {
-                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, -180, 0);
             }
         }
@@ -245,7 +245,7 @@ public class PlayerControls : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && !isJumping && !isClimbing)
             {
-                rigid.velocity = new Vector2(rigid.velocity.x, jumpSpeed);
+                rigid.velocity = new Vector2(rigid.velocity.x, 7 + agility / 10);
                 {
                     isJumping = true;
                     animator.SetBool("Jumping", true);
