@@ -157,9 +157,9 @@ public class PlayerControls : MonoBehaviour
         #endregion
 
         #region Currenthealth max Limits
-        if (currentHealth > maxHealth)
+        if (currentHealth > maxHealth + stamina * 10)
         {
-            currentHealth = maxHealth; 
+            currentHealth = maxHealth + stamina * 10; 
         }
         #endregion
     }

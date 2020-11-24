@@ -6630,7 +6630,7 @@ MonoBehaviour:
   whatIsButton:
     serializedVersion: 2
     m_Bits: 65536
-  hpP: 1
+  stamina: 1
   regenP: 1
   agility: 2
 --- !u!114 &371501384
@@ -6656,7 +6656,7 @@ MonoBehaviour:
   sDamage: 50
   attackRate: 1.5
   strength: 1
-  agility: 1.1
+  agility: 2
 --- !u!114 &371501385
 MonoBehaviour:
   m_ObjectHideFlags: 0

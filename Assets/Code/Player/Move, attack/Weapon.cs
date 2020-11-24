@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour
     #endregion
 
     public int strength = 1;
-    public float agility = 1f;
+    public float agility = 2f;
 
     void Update()
     {
@@ -36,13 +36,13 @@ public class Weapon : MonoBehaviour
             {
                 animator.SetTrigger("Attacking");
 
-                nextAttack = Time.time + 1f / attackRate / agility;
+                nextAttack = Time.time + 1.5f / attackRate / (agility / 2);
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
                 animator.SetTrigger("StrAtt");
 
-                nextAttack = Time.time + 2f / attackRate / agility;
+                nextAttack = Time.time + 3f / attackRate / (agility / 2);
             }
         }
 
