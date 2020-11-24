@@ -64,6 +64,13 @@ public class PlayerControls : MonoBehaviour
 
     private Inventory inventory;
 
+    #region stats
+
+    public float agility = 1;
+    public int hpPercent = 1, regenBuff = 1;
+
+    #endregion
+
     // Debugging attemtps.
     // private bool created = false;
     #endregion
@@ -152,7 +159,7 @@ public class PlayerControls : MonoBehaviour
         #region Currenthealth max Limits
         if (currentHealth > maxHealth)
         {
-            currentHealth = maxHealth; 
+            currentHealth = maxHealth * hpPercent; 
         }
         #endregion
     }
@@ -216,13 +223,13 @@ public class PlayerControls : MonoBehaviour
 
             if (movement > 0f)
             {
-                rigid.velocity = new Vector2(movement * speed, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, 0, 0);
 
             }
             else if (movement < 0f)
             {
-                rigid.velocity = new Vector2(movement * speed, rigid.velocity.y);
+                rigid.velocity = new Vector2(movement * speed * agility, rigid.velocity.y);
                 transform.eulerAngles = new Vector3(0, -180, 0);
             }
         }
@@ -316,7 +323,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Regeneration()
     {
-        currentHealth += 5;
+        currentHealth += 5 * regenBuff;
         healthBar.SetHealth(currentHealth);
     }
     
