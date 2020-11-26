@@ -66,8 +66,7 @@ public class PlayerControls : MonoBehaviour
 
     #region stats
 
-    public int stamina = 1, regenP = 1;
-    public float agility = 1f;
+    Stats stats;
 
     #endregion
 
@@ -94,6 +93,7 @@ public class PlayerControls : MonoBehaviour
         weapon = GetComponent<Weapon>();
         scenes = GetComponent<LevelColl>();
         mcoll = GetComponent<Collider2D>();
+        stats = GetComponent<Stats>();
         #endregion
 
         DontDestroyOnLoad(this.gameObject);
@@ -157,9 +157,9 @@ public class PlayerControls : MonoBehaviour
         #endregion
 
         #region Currenthealth max Limits
-        if (currentHealth > maxHealth + stamina * 10)
+        if (currentHealth > maxHealth + stats.stamina * 10)
         {
-            currentHealth = maxHealth + stamina * 10; 
+            currentHealth = maxHealth + stats.stamina * 10; 
         }
         #endregion
     }
@@ -245,7 +245,7 @@ public class PlayerControls : MonoBehaviour
         {
             if (Input.GetButtonDown("Jump") && !isJumping && !isClimbing)
             {
-                rigid.velocity = new Vector2(rigid.velocity.x, 7 + agility / 10);
+                rigid.velocity = new Vector2(rigid.velocity.x, 7 + stats.agility / 10);
                 {
                     isJumping = true;
                     animator.SetBool("Jumping", true);
@@ -323,7 +323,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Regeneration()
     {
-        currentHealth += 5 * regenP;
+        currentHealth += 5 * stats.will;
         healthBar.SetHealth(currentHealth);
     }
     
