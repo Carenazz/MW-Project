@@ -5,33 +5,27 @@ using UnityEngine;
 public class GlobalLight : MonoBehaviour
 {
     public GameObject gLight;
-    public bool on = true;
-    private float timer = 0.5f;
-
-    private void Update()
-    {
-        timer -= Time.deltaTime;
-    }
+    public GameObject lSwitch;
+    public bool switched = false;
 
     void Switcher()
     {
-        if (on)
+        if (!switched)
         {
-            gLight.SetActive(false); 
-            on = false;
-            timer = 0.5f;
+            gLight.SetActive(false);
+            lSwitch.SetActive(false);
+            switched = true;
         }
-        else if (!on)
+        else if (switched)
         {
             gLight.SetActive(true);
-            on = true;
-            timer = 0.5f;
+            lSwitch.SetActive(false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && timer <= 0f)
+        if (collision.CompareTag("Player"))
         {
             Switcher();
         }
