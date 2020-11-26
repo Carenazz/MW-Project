@@ -75,8 +75,6 @@ public class PlayerControls : MonoBehaviour
     // private bool created = false;
     #endregion
     
-    // Push test from home after pull.
-
     void Start()
     {
         currentHealth = maxHealth;
