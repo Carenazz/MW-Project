@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class StatUI : MonoBehaviour
 {
-    PlayerControls player;
     public GameObject stats;
     private bool isOpen = false;
+    Stats player;
 
     private void Start()
     {
-        player = GetComponent<PlayerControls>();
+        player = stats.GetComponent<Stats>();
     }
 
     private void Update()
