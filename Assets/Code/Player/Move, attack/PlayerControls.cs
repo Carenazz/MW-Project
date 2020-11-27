@@ -71,6 +71,7 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     // Debugging attemtps.
+    ExpLevel exp;
     // private bool created = false;
     #endregion
     
@@ -94,6 +95,7 @@ public class PlayerControls : MonoBehaviour
         scenes = GetComponent<LevelColl>();
         mcoll = GetComponent<Collider2D>();
         stats = GetComponent<Stats>();
+        exp = GetComponent<ExpLevel>();
         #endregion
 
         DontDestroyOnLoad(this.gameObject);
@@ -117,6 +119,8 @@ public class PlayerControls : MonoBehaviour
 
                 Jump();
                 #endregion
+
+                Tester();
 
                 PButton();
 
@@ -360,4 +364,13 @@ public class PlayerControls : MonoBehaviour
         }
     }
     #endregion
+
+    void Tester()
+    {
+        if (Input.GetKey(KeyCode.L))
+        {
+            exp.ExpGain(10);
+            Debug.Log("Gave 10 EXP");
+        }
+    }
 }

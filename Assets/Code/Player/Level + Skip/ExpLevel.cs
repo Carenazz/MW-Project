@@ -36,4 +36,10 @@ public class ExpLevel : MonoBehaviour
         stats.will = (stats.will / level) * 2;
         stats.stamina = stats.stamina + level;
     }
+
+    public void ExpGain(int amount)
+    {
+        exp += amount;
+        // To do, make exp bar ingame following %'s
+    }
 }
