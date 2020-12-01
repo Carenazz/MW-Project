@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExpLevel : MonoBehaviour
 {
     Stats stats;
+    LevelSystem level;
 
     private void Start()
     {

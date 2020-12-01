@@ -27,4 +27,12 @@ public class LevelWindow : MonoBehaviour
     {
         levelText.text = "Level\n" + (levelNumber + 1);
     }
+
+    public void SetLevelSystem(LevelSystem levelSystem)
+    {
+        this.levelSystem = levelSystem;
+
+        SetLevelNumber(levelSystem.GetLevelNumber());
+        SetExperienceBarSize(levelSystem.GetExperiencedNormalized());
+    }
 }
