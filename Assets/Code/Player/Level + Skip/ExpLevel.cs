@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ExpLevel : MonoBehaviour
 {
-    public int exp, level = 1, maxExp = 150;
     Stats stats;
 
     private void Start()
