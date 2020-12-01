@@ -7,7 +7,7 @@ public class LevelWindow : MonoBehaviour
 {
     private Text levelText;
     private Image experienceBarImage;
-    private LevelSystem LevelSystem;
+    private LevelSystem levelSystem;
 
     private void Awake()
     {
