@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 90403036}
   - component: {fileID: 90403035}
   m_Layer: 5
-  m_Name: Fill
+  m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8031,7 +8031,7 @@ GameObject:
   - component: {fileID: 581132974}
   - component: {fileID: 581132975}
   m_Layer: 5
-  m_Name: Exp Bar
+  m_Name: ExperienceBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9084,7 +9084,7 @@ GameObject:
   - component: {fileID: 886681414}
   - component: {fileID: 886681413}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
