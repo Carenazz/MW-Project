@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelSystem
 {
     // Inspired by CodeMonkey
-
+    public event EventHandler onExpChange, onLevelChange;
     private int level, experience, experienceNextLvl;
 
     public LevelSystem()
@@ -23,7 +24,9 @@ public class LevelSystem
         {
             level++;
             experience -= experienceNextLvl;
+            if (onLevelChange != null) onLevelChange(this, EventArgs.Empty);
         }
+        if (onExpChange != null) onLevelChange(this, EventArgs.Empty);
     }
 
     public int GetLevelNumber()
