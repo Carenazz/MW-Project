@@ -14,8 +14,12 @@ public class LevelWindow : MonoBehaviour
         levelText = transform.Find("levelText").GetComponent<Text>();
         experienceBarImage = transform.Find("experienceBar").Find("bar").GetComponent<Image>();
 
-        SetExperienceBarSize(.5f);
-        SetLevelNumber(7);
+    }
+
+    private void Update()
+    {
+        // Testing attempts
+        Input.GetKey(KeyCode.L);
     }
 
     private void SetExperienceBarSize(float experienceNormalized)
