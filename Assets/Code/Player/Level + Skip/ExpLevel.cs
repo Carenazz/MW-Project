@@ -5,7 +5,6 @@ using UnityEngine;
 public class ExpLevel : MonoBehaviour
 {
     Stats stats;
-    LevelSystem level;
 
     private void Start()
     {
@@ -14,10 +13,10 @@ public class ExpLevel : MonoBehaviour
 
     void LevelStats()
     {
-        stats.agility = (stats.agility * level) / 2;
-        stats.str = (stats.str * level) / 2;
-        stats.will = (stats.will / level) * 2;
-        stats.stamina = stats.stamina + level;
+        stats.agility + 0.2f;
+        stats.str + 1;
+        stats.will + 1 / 3;
+        stats.stamina + 1;
     }
 
 }
