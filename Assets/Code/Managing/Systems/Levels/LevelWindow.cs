@@ -5,16 +5,11 @@ using UnityEngine.UI;
 
 public class LevelWindow : MonoBehaviour
 {
+    [SerializeField]
     private Text levelText;
+    [SerializeField]
     private Image experienceBarImage;
     private LevelSystem levelSystem;
-
-    private void Awake()
-    {
-        levelText = transform.Find("levelText").GetComponent<Text>();
-        experienceBarImage = transform.Find("experienceBar").Find("bar").GetComponent<Image>();
-
-    }
 
     private void Update()
     {
