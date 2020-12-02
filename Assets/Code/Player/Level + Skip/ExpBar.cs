@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class ExpBar : MonoBehaviour
 {
     public Slider slider;
+    LevelSystem level;
+
+    private void Awake()
+    {
+        level = GetComponent<LevelSystem>();    
+    }
 
     public void SetMaxExp(int exp)
     {
