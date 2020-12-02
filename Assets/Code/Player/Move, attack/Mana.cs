@@ -23,7 +23,7 @@ public class Mana : MonoBehaviour
     {
         #region Mana regen
         regenTimer -= Time.deltaTime;
-        if (regenTimer <= 0 && mana <= 145)
+        if (regenTimer <= 0 && mana <= maxMana - manaRegen)
         {
             mana += manaRegen;
             regenTimer = 4f;
