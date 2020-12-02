@@ -6525,6 +6525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelText: {fileID: 1023180838}
   experienceBarImage: {fileID: 90403035}
+  slider: {fileID: 581132975}
 --- !u!1 &326293102
 GameObject:
   m_ObjectHideFlags: 0

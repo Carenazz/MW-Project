@@ -26,7 +26,7 @@ public class LevelSystem
             experience -= experienceNextLvl;
             if (onLevelChange != null) onLevelChange(this, EventArgs.Empty);
         }
-        if (onExpChange != null) onLevelChange(this, EventArgs.Empty);
+        if (onExpChange != null) onExpChange(this, EventArgs.Empty);
     }
 
     public int GetLevelNumber()
@@ -38,4 +38,6 @@ public class LevelSystem
     {
         return (float)experience / experienceNextLvl;
     }
+
+
 }

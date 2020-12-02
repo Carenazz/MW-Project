@@ -49,13 +49,12 @@ public class PlayerControls : MonoBehaviour
     LevelColl scenes;
     SpriteRenderer SRender;
     Collider2D mcoll;
-    
-    // Animations
+    private LevelSystem levelSystem;
 
+    // Animations
     public Animator animator;
 
     // Layer Masks & transforms
-
     public Transform jumpPoint;
     public LayerMask whatIsLadder, whatIsPlatform, whatIsPushable, whatIsButton;
     #endregion
@@ -358,6 +357,26 @@ public class PlayerControls : MonoBehaviour
             scenes.BackToMenu();
             Destroy(gameObject);
         }
+    }
+    #endregion
+
+    #region LevelUp animations & WIP
+    public void SetLevelSystem(LevelSystem levelSystem)
+    {
+        this.levelSystem = levelSystem;
+
+        levelSystem.onLevelChange += LevelSystem_OnLevelChange;
+    }
+
+    private void LevelSystem_OnLevelChange(object sender, EventArgs e)
+    {
+        Flash(new Color(1, 1, 1, 1));
+    }
+
+    private void Flash(Color flashColor)
+    {
+        materialTintColor = flashColor;
+        material.SetColor("_Tint", materialTintColor);
     }
     #endregion
 }
