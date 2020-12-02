@@ -10,11 +10,15 @@ public class LevelWindow : MonoBehaviour
     [SerializeField]
     private Image experienceBarImage;
     private LevelSystem levelSystem;
+    public Slider slider;
 
     private void Update()
     {
         // Testing attempts
-        Input.GetKey(KeyCode.L);
+        if (Input.GetKey(KeyCode.L))
+        {
+            levelSystem.AddExperience(50);
+        }
     }
 
     private void SetExperienceBarSize(float experienceNormalized)

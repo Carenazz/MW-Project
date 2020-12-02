@@ -7,7 +7,7 @@ public class LevelSystem
 {
     // Inspired by CodeMonkey
     public event EventHandler onExpChange, onLevelChange;
-    private int level, experience, experienceNextLvl;
+    public int level, experience, experienceNextLvl;
 
     public LevelSystem()
     {
