@@ -19,7 +19,7 @@ public class ExpBar : MonoBehaviour
         slider.value = exp;
     }
 
-    public void SetMana(int exp)
+    public void SetExp(int exp)
     {
         slider.value = exp;
     }
