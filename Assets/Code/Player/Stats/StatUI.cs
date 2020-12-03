@@ -34,4 +34,5 @@ public class StatUI : MonoBehaviour
             isOpen = false;
         }
     }
+    
 }
