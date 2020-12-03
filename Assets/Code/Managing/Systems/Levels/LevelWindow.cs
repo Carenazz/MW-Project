@@ -21,6 +21,7 @@ public class LevelWindow : MonoBehaviour
         }
     }
 
+    #region Setting system
     private void SetExperienceBarSize(float experienceNormalized)
     {
         experienceBarImage.fillAmount = experienceNormalized;
@@ -41,7 +42,9 @@ public class LevelWindow : MonoBehaviour
         levelSystem.onExpChange += LevelSystem_OnExpChanged;
         levelSystem.onLevelChange += LevelSystem_OnLevelChanged;
     }
+    #endregion
 
+    #region Events and system
     private void LevelSystem_OnLevelChanged(object sender, System.EventArgs e)
     {
         SetLevelNumber(levelSystem.GetLevelNumber());
@@ -51,4 +54,5 @@ public class LevelWindow : MonoBehaviour
     {
         SetExperienceBarSize(levelSystem.GetExperienceNormalized());
     }
+    #endregion
 }
