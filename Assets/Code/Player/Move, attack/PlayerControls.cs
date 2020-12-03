@@ -370,13 +370,15 @@ public class PlayerControls : MonoBehaviour
 
     private void LevelSystem_OnLevelChange(object sender, EventArgs e)
     {
-        Flash(new Color(1, 1, 1, 1));
+        // Flash(new Color(1, 1, 1, 1));
     }
 
+    /*
     private void Flash(Color flashColor)
     {
         materialTintColor = flashColor;
         material.SetColor("_Tint", materialTintColor);
     }
+    */
     #endregion
 }
