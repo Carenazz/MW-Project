@@ -29,6 +29,7 @@ public class LevelSystem
         if (onExpChange != null) onExpChange(this, EventArgs.Empty);
     }
 
+    #region Getlevel / Exp
     public int GetLevelNumber()
     {
         return level;
@@ -38,6 +39,5 @@ public class LevelSystem
     {
         return (float)experience / experienceNextLvl;
     }
-
-
+    #endregion
 }

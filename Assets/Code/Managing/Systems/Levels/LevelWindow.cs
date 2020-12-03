@@ -5,12 +5,14 @@ using UnityEngine.UI;
 
 public class LevelWindow : MonoBehaviour
 {
+    #region Declarations
     [SerializeField]
     private Text levelText;
     [SerializeField]
     private Image experienceBarImage;
     private LevelSystem levelSystem;
     public Slider slider;
+    #endregion
 
     private void Update()
     {
