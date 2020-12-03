@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LevelTest : MonoBehaviour
 {
+    [SerializeField]
+    private LevelWindow levelWindow;
+
     private void Awake()
     {
         LevelSystem levelSystem = new LevelSystem();
@@ -12,5 +15,7 @@ public class LevelTest : MonoBehaviour
         Debug.Log(levelSystem.GetLevelNumber());
         levelSystem.AddExperience(60);
         Debug.Log(levelSystem.GetLevelNumber());
+
+        levelWindow.SetLevelSystem(levelSystem);
     }
 }

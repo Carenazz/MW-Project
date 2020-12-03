@@ -13,7 +13,6 @@ public class LevelWindow : MonoBehaviour
     private LevelSystem levelSystem;
     public Slider slider;
     #endregion
-
     private void Update()
     {
         // Testing attempts
@@ -31,7 +30,7 @@ public class LevelWindow : MonoBehaviour
 
     private void SetLevelNumber(int levelNumber)
     {
-        levelText.text = "Level\n" + (levelNumber + 1);
+        levelText.text = "Level: " + (levelNumber + 1);
     }
 
     public void SetLevelSystem(LevelSystem levelSystem)
