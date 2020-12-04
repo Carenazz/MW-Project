@@ -371,7 +371,7 @@ public class PlayerControls : MonoBehaviour
     private void LevelSystem_OnLevelChange(object sender, EventArgs e)
     {
         // Flash(new Color(1, 1, 1, 1));
-
+        stats.LevelStats();
     }
 
     /*
