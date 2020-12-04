@@ -12,6 +12,12 @@ public class LevelWindow : MonoBehaviour
     private Image experienceBarImage;
     private LevelSystem levelSystem;
     public Slider slider;
+    private Stats stats;
+
+    private void Awake()
+    {
+        stats = GetComponent<Stats>();
+    }
     #endregion
     private void Update()
     {

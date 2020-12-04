@@ -28,6 +28,7 @@ public class Stats : MonoBehaviour
         str += 1;
         will += 1 / 3;
         stamina += 1;
+        SetTexts();
     }
 
     public void SetLevelSystem(LevelSystem levelSystem)
