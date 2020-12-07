@@ -34,6 +34,12 @@ public class PlayerControls : MonoBehaviour
     public float climbSpeed;
     #endregion
 
+    #region Levels
+
+    public int level = 1;
+
+    #endregion
+
     // Attack
     Weapon weapon;
 
@@ -50,6 +56,7 @@ public class PlayerControls : MonoBehaviour
     SpriteRenderer SRender;
     Collider2D mcoll;
     private LevelSystem levelSystem;
+    public XPBar expBar;
 
     // Animations
     public Animator animator;
@@ -371,6 +378,7 @@ public class PlayerControls : MonoBehaviour
     private void LevelSystem_OnLevelChange(object sender, EventArgs e)
     {
         // Flash(new Color(1, 1, 1, 1));
+        level++;
     }
 
     /*
@@ -379,5 +387,10 @@ public class PlayerControls : MonoBehaviour
         
     }
     */
+    #endregion
+
+    #region Experience and Levels
+
+
     #endregion
 }

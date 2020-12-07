@@ -6367,7 +6367,6 @@ GameObject:
   - component: {fileID: 304919276}
   - component: {fileID: 304919277}
   - component: {fileID: 304919278}
-  - component: {fileID: 304919279}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6526,20 +6525,6 @@ MonoBehaviour:
   levelText: {fileID: 1023180838}
   experienceBarImage: {fileID: 90403035}
   xp: {fileID: 0}
---- !u!114 &304919279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304919269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d570703150820ab46ac07a09add8db50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 581132975}
-  levelW: {fileID: 304919278}
 --- !u!1 &315482679
 GameObject:
   m_ObjectHideFlags: 0
@@ -6930,12 +6915,14 @@ MonoBehaviour:
   distance: 0.5
   bDistance: 1
   climbSpeed: 3
+  level: 1
   isPressing: 0
   isGrounded: 0
   isClimbing: 1
   isJumping: 0
   bTimer: 1.5
   rTimer: 10
+  expBar: {fileID: 0}
   animator: {fileID: 371501380}
   jumpPoint: {fileID: 94998025}
   whatIsLadder:
@@ -8021,6 +8008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581132974}
   - component: {fileID: 581132975}
+  - component: {fileID: 581132976}
   m_Layer: 5
   m_Name: ExperienceBar
   m_TagString: Untagged
@@ -8099,6 +8087,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &581132976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581132973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d570703150820ab46ac07a09add8db50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 581132975}
+  levelW: {fileID: 0}
 --- !u!1 &646769579
 GameObject:
   m_ObjectHideFlags: 0
