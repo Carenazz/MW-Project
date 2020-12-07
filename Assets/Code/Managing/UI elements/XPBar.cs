@@ -8,18 +8,22 @@ public class XPBar : MonoBehaviour
 {
     public Slider slider;
     public LevelWindow levelW;
-    LevelSystem level;
+    LevelSystem levelSystem;
 
     private void Awake()
     {
         levelW = GetComponent<LevelWindow>();
     }
 
+    private void FixedUpdate()
+    {
+        SetBar();
+    }
+    
     // Below is planned work in progress.
     public void SetBar()
     {
-        slider.minValue = 0;
-        slider.maxValue = level.experienceNextLvl;
+        slider.maxValue = 100 * levelSystem.level;
     }
 
     public void UpdateBar(int exp)
@@ -29,7 +33,7 @@ public class XPBar : MonoBehaviour
 
     private void SetLevelSystem(LevelSystem levelSystem)
     {
-        this.level = levelSystem;
+        this.levelSystem = levelSystem;
 
         levelSystem.onLevelChange += Level_OnLvlChange;
     }
