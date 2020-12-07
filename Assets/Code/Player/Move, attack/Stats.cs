@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class Stats : MonoBehaviour
 {
+    #region Stats, Text and levelSystem (including start)
     public int str, stamina, will;
     public float agility;
     private LevelSystem levelSystem;
@@ -21,6 +22,7 @@ public class Stats : MonoBehaviour
         agility = 2f;
         SetTexts();
     }
+    #endregion
 
     public void LevelStats(object sender, EventArgs e)
     {

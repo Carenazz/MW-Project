@@ -41,13 +41,13 @@ public class Weapon : MonoBehaviour
             {
                 animator.SetTrigger("Attacking");
 
-                nextAttack = Time.time + 1.5f / attackRate / (stats.agility / 4);
+                nextAttack = Time.time + 1.5f / attackRate / (stats.agility / 3);
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
                 animator.SetTrigger("StrAtt");
 
-                nextAttack = Time.time + 3f / attackRate / (stats.agility / 4);
+                nextAttack = Time.time + 3f / attackRate / (stats.agility / 3);
             }
         }
 
