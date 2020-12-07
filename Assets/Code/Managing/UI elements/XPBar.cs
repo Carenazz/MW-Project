@@ -26,14 +26,7 @@ public class XPBar : MonoBehaviour
         slider.value = exp;
     }
 
-    private void SetLevelSystem(LevelSystem levelSystem)
-    {
-        this.levelSystem = levelSystem;
-
-        levelSystem.onLevelChange += Level_OnLvlChange;
-    }
-
-    private void Level_OnLvlChange(object sender, EventArgs e)
+    private void OnLvlChange(object sender, EventArgs e)
     {
         SetBar();
     }
