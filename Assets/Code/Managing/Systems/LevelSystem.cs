@@ -25,6 +25,9 @@ public class LevelSystem
             level++;
             experience -= experienceNextLvl;
             if (onLevelChange != null) onLevelChange(this, EventArgs.Empty);
+
+            // To make future levels require more to reach
+            experienceNextLvl = experienceNextLvl * 2;
         }
         if (onExpChange != null) onExpChange(this, EventArgs.Empty);
     }
