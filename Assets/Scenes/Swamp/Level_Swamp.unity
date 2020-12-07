@@ -6731,7 +6731,6 @@ GameObject:
   - component: {fileID: 371501386}
   - component: {fileID: 371501385}
   - component: {fileID: 371501390}
-  - component: {fileID: 371501391}
   - component: {fileID: 371501393}
   m_Layer: 12
   m_Name: Player
@@ -6916,13 +6915,15 @@ MonoBehaviour:
   bDistance: 1
   climbSpeed: 3
   level: 1
+  expA: 0
+  maxExp: 100
   isPressing: 0
   isGrounded: 0
   isClimbing: 1
   isJumping: 0
   bTimer: 1.5
   rTimer: 10
-  expBar: {fileID: 0}
+  expBar: {fileID: 581132976}
   animator: {fileID: 371501380}
   jumpPoint: {fileID: 94998025}
   whatIsLadder:
@@ -7048,18 +7049,6 @@ MonoBehaviour:
   sta: {fileID: 1920428386}
   willT: {fileID: 315482681}
   agiT: {fileID: 1008852822}
---- !u!114 &371501391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371501376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de1b55b10940bf34da8e4762b81674f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &371501393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8100,7 +8089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 581132975}
-  levelW: {fileID: 0}
+  pXp: {fileID: 0}
 --- !u!1 &646769579
 GameObject:
   m_ObjectHideFlags: 0

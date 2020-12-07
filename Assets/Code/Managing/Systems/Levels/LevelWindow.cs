@@ -11,6 +11,7 @@ public class LevelWindow : MonoBehaviour
     [SerializeField]
     private Image experienceBarImage;
     private LevelSystem levelSystem;
+    private PlayerControls player;
     private Stats stats;
     public XPBar xp;
 
@@ -18,6 +19,7 @@ public class LevelWindow : MonoBehaviour
     {
         stats = GetComponent<Stats>();
         xp = GetComponent<XPBar>();
+        player = GetComponent<PlayerControls>();
     }
     #endregion
     private void Update()
@@ -25,8 +27,7 @@ public class LevelWindow : MonoBehaviour
         // Testing attempts
         if (Input.GetKey(KeyCode.L))
         {
-            levelSystem.AddExperience(50);
-            xp.UpdateBar(levelSystem.experience);
+            xp.UpdateBar(50);
         }
     }
 

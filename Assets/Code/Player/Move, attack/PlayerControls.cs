@@ -34,9 +34,9 @@ public class PlayerControls : MonoBehaviour
     public float climbSpeed;
     #endregion
 
-    #region Levels
+    #region Levels and experience
 
-    public int level = 1;
+    public int level = 1, expA, maxExp = 100;
 
     #endregion
 
@@ -166,6 +166,13 @@ public class PlayerControls : MonoBehaviour
         if (currentHealth > maxHealth + stats.stamina * 10)
         {
             currentHealth = maxHealth + stats.stamina * 10; 
+        }
+        #endregion
+
+        #region testing purposes for exp
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            expBar.UpdateBar(50);
         }
         #endregion
     }
@@ -391,6 +398,11 @@ public class PlayerControls : MonoBehaviour
 
     #region Experience and Levels
 
+    private void ExpGain(int amount)
+    {
+        expA += amount;
+        expBar.UpdateBar(amount);
+    }
 
     #endregion
 }
