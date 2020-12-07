@@ -19,7 +19,7 @@ public class XPBar : MonoBehaviour
     public void SetBar()
     {
         slider.minValue = 0;
-        slider.maxValue += level.experienceNextLvl;
+        slider.maxValue = level.experienceNextLvl;
     }
 
     public void UpdateBar(int exp)
