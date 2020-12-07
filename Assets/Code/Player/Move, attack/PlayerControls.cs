@@ -376,8 +376,7 @@ public class PlayerControls : MonoBehaviour
     /*
     private void Flash(Color flashColor)
     {
-        materialTintColor = flashColor;
-        material.SetColor("_Tint", materialTintColor);
+        
     }
     */
     #endregion

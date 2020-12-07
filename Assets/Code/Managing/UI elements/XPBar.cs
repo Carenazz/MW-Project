@@ -15,15 +15,10 @@ public class XPBar : MonoBehaviour
         levelW = GetComponent<LevelWindow>();
     }
 
-    private void FixedUpdate()
-    {
-        SetBar();
-    }
-    
     // Below is planned work in progress.
     public void SetBar()
     {
-        slider.maxValue = 100 * levelSystem.level;
+        slider.maxValue = levelSystem.experienceNextLvl;
     }
 
     public void UpdateBar(int exp)
