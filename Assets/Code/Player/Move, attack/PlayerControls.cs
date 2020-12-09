@@ -172,6 +172,7 @@ public class PlayerControls : MonoBehaviour
         #region testing purposes for exp
         if (Input.GetKeyDown(KeyCode.K))
         {
+            // Virker kun en gang?
             expBar.UpdateBar(50);
         }
         #endregion
