@@ -17,9 +17,10 @@ public class XPBar : MonoBehaviour
     }
 
     // Below is planned work in progress.
-    public void SetBar()
+    public void SetBar(int max)
     {
-        slider.maxValue = 100;
+        slider.maxValue = max;
+        slider.value = max;
     }
 
     public void UpdateBar(int exp)
