@@ -23,14 +23,6 @@ public class LevelWindow : MonoBehaviour
     }
     #endregion
 
-    private void Update()
-    {
-        // Testing attempts
-        if (Input.GetKey(KeyCode.L))
-        {
-            xp.UpdateBar(50);
-        }
-    }
 
     #region Setting system
     private void SetExperienceBarSize(float experienceNormalized)
