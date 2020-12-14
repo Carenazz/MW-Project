@@ -102,6 +102,10 @@ public class PlayerControls : MonoBehaviour
         stats = GetComponent<Stats>();
         #endregion
 
+        #region Level System
+        LevelSystem levelSystem = new LevelSystem();
+        #endregion
+
         DontDestroyOnLoad(this.gameObject);
 
         inventory = new Inventory();

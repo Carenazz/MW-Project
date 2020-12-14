@@ -22,6 +22,7 @@ public class LevelWindow : MonoBehaviour
         player = GetComponent<PlayerControls>();
     }
     #endregion
+
     private void Update()
     {
         // Testing attempts

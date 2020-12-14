@@ -21,6 +21,10 @@ public class Stats : MonoBehaviour
         will = 1;
         agility = 2f;
         SetTexts();
+
+        #region Level System
+        LevelSystem levelSystem = new LevelSystem();
+        #endregion
     }
     #endregion
 
@@ -39,6 +43,7 @@ public class Stats : MonoBehaviour
 
         levelSystem.onLevelChange += LevelStats;
     }
+
     public void SetTexts()
     {
         strT.text = "Strength: " + str;
