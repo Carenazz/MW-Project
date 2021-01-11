@@ -23,9 +23,9 @@ public class PlayerControls : MonoBehaviour
     public HealthBar healthBar;
 
     [SerializeField]
-    private int maxHealth = 100, maxLives;
+    private int maxHealth = 100;
     public int currentHealth;
-    private float finalDeath, deathTimer;
+    private float deathTimer;
 
     #endregion
 
@@ -157,13 +157,13 @@ public class PlayerControls : MonoBehaviour
         }
 
         #region Life handler and death
-        else if (currentHealth <= 0 && maxLives != 1)
+        else if (currentHealth <= 0)
         {
             Dying();
         }
         else
         {
-            PermaDeath();
+            Debug.Log("Some error has occured");
         }
         #endregion
 
@@ -368,16 +368,6 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void PermaDeath()
-    {
-        animator.SetBool("Death", true);
-        finalDeath -= Time.deltaTime;
-        if (finalDeath <= 0)
-        {
-            scenes.BackToMenu();
-            Destroy(gameObject);
-        }
-    }
     #endregion
 
     #region LevelUp animations & WIP
