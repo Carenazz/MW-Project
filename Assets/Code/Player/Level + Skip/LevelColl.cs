@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelColl : MonoBehaviour
 {
     PlayerControls hp;
-    
+
     private void Start()
     {
         hp = GetComponent<PlayerControls>();
