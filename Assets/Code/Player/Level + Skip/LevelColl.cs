@@ -19,6 +19,7 @@ public class LevelColl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
             hp.Healed(20);
+            hp.SavePlayer();
         }
 
         #region levelskips
