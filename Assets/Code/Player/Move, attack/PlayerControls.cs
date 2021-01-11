@@ -431,11 +431,6 @@ public class PlayerControls : MonoBehaviour
         position.y = data.position[1];
         position.z = data.position[2];
         transform.position = position;
-
-        if (PauseMenu.GameIsPaused)
-        {
-            PauseMenu.Resume();
-        }
     }
 
     #endregion
