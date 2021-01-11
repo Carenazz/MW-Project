@@ -361,7 +361,6 @@ public class PlayerControls : MonoBehaviour
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
             deathTimer = 1.5f;
-            maxLives--;
             transform.position = GameObject.FindWithTag("Respawn").transform.position;
             weapon.enabled = true;
             mcoll.enabled = true;
