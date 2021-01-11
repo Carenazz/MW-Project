@@ -23,7 +23,8 @@ public class PlayerControls : MonoBehaviour
     public HealthBar healthBar;
 
     [SerializeField]
-    private int maxHealth = 100, currentHealth, maxLives;
+    private int maxHealth = 100, maxLives;
+    public int currentHealth;
     private float finalDeath, deathTimer;
 
     #endregion
@@ -79,7 +80,7 @@ public class PlayerControls : MonoBehaviour
     // Debugging attemtps.
     // private bool created = false;
     #endregion
-    
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -407,6 +408,34 @@ public class PlayerControls : MonoBehaviour
     {
         expA += amount;
         expBar.UpdateBar(amount);
+    }
+
+    #endregion
+
+    #region Save System
+
+    public void SavePlayer()
+    {
+        SaveLoad.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveLoad.LoadPlayer();
+
+        level = data.levels;
+        currentHealth = data.health;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+
+        if (PauseMenu.GameIsPaused)
+        {
+            PauseMenu.Resume();
+        }
     }
 
     #endregion
