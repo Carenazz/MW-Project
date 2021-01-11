@@ -51,4 +51,16 @@ public class Stats : MonoBehaviour
         willT.text = "Will: " + will;
         agiT.text = "Agility: " + agility;
     }
+
+    public void LoadStats()
+    {
+        PlayerData data = SaveLoad.LoadPlayer();
+
+        str = data.str;
+        stamina = data.stamina;
+        will = data.will;
+        agility = data.agility;
+
+        SetTexts();
+    }
 }
