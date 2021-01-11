@@ -90,8 +90,6 @@ public class PlayerControls : MonoBehaviour
         speed = 7f;
         movement = 0f;
         deathTimer = 1.5f;
-        maxLives = 5;
-        finalDeath = 5f;
         #endregion
 
         #region Getting components
