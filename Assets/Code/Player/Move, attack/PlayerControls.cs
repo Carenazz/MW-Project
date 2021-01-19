@@ -420,6 +420,7 @@ public class PlayerControls : MonoBehaviour
         transform.position = position;
 
         stats.LoadStats();
+        scenes.LoadLevel();
     }
 
     #endregion

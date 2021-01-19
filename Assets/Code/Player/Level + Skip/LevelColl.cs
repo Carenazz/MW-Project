@@ -49,6 +49,7 @@ public class LevelColl : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(currentScene);
+        PlayerData data = SaveLoad.LoadPlayer();
+        currentScene = data.currentScene;
     }
 }
