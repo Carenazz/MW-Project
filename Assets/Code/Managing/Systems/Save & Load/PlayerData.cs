@@ -16,6 +16,9 @@ public class PlayerData
     public int str, stamina, will;
     public float agility;
 
+    // Scene saved
+    public int currentScene;
+
     #endregion
 
     public PlayerData (PlayerControls player)
@@ -36,5 +39,10 @@ public class PlayerData
         stamina = stats.stamina;
         will = stats.will;
         agility = stats.agility;
+    }
+
+    public PlayerData (LevelColl levels)
+    {
+        currentScene = levels.currentScene;
     }
 }

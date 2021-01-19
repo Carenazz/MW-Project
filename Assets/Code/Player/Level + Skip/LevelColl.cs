@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelColl : MonoBehaviour
 {
     PlayerControls hp;
+    public int currentScene = 1;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class LevelColl : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
             hp.Healed(20);
+            currentScene++;
             hp.SavePlayer();
         }
 
