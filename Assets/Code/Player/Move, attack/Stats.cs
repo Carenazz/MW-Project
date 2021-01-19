@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class Stats : MonoBehaviour
 {
     #region Stats, Text and levelSystem (including start)
-    public int str, stamina, will;
-    public float agility;
+    public int str = 2, stamina = 1, will = 1;
+    public float agility = 2f;
     private LevelSystem levelSystem;
     [SerializeField]
     private Text strT, sta, willT, agiT;
@@ -50,6 +50,11 @@ public class Stats : MonoBehaviour
         sta.text = "Stamina: " + stamina;
         willT.text = "Will: " + will;
         agiT.text = "Agility: " + agility;
+    }
+
+    public void SaveStats()
+    {
+        SaveLoad.SaveStats(this);
     }
 
     public void LoadStats()
