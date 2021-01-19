@@ -404,6 +404,8 @@ public class PlayerControls : MonoBehaviour
     public void SavePlayer()
     {
         SaveLoad.SavePlayer(this);
+        stats.SaveStats();
+        scenes.SaveLevel();
     }
 
     public void LoadPlayer()
