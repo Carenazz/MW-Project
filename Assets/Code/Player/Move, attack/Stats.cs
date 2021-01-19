@@ -61,10 +61,10 @@ public class Stats : MonoBehaviour
     {
         PlayerData data = SaveLoad.LoadPlayer();
 
-        str = data.str;
-        stamina = data.stamina;
-        will = data.will;
-        agility = data.agility;
+        str = data.str + 2;
+        stamina = data.stamina + 1;
+        will = data.will + 1;
+        agility = data.agility + 2f;
 
         SetTexts();
     }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelColl : MonoBehaviour
 {
     PlayerControls hp;
-    public int currentScene = 1;
+    public int currentScene = 0;
 
     private void Start()
     {
@@ -47,9 +47,14 @@ public class LevelColl : MonoBehaviour
         currentScene = 1;
     }
 
+    public void SaveLevel()
+    {
+        SaveLoad.SaveScene(this);
+    }
+
     public void LoadLevel()
     {
         PlayerData data = SaveLoad.LoadPlayer();
-        currentScene = data.currentScene;
+        currentScene = data.currentScene + 1;
     }
 }
