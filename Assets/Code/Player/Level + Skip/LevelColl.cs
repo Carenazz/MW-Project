@@ -44,6 +44,7 @@ public class LevelColl : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene("Menu");
+        currentScene = 1;
     }
 
     public void LoadLevel()
