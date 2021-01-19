@@ -45,4 +45,9 @@ public class LevelColl : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(currentScene);
+    }
 }
