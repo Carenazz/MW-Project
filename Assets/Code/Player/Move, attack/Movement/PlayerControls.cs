@@ -46,7 +46,7 @@ public class PlayerControls : MonoBehaviour
 
     #region Timer + Bools
     [SerializeField]
-    private bool isPressing, isGrounded, isClimbing, isJumping;
+    private bool isPressing, isGrounded, isClimbing, isJumping, doubleJump;
     [SerializeField]
     private float bTimer = 0f, rTimer = 10f;
     #endregion
@@ -192,6 +192,8 @@ public class PlayerControls : MonoBehaviour
             animator.SetBool("Jumping", false);
             isClimbing = false;
             animator.SetBool("Climber", false);
+            doubleJump = false;
+            animator.SetBool("DoubleJump", false);
         }
 
         if (collision.transform.tag == "mPlatform")
@@ -267,6 +269,14 @@ public class PlayerControls : MonoBehaviour
                     isJumping = true;
                     animator.SetBool("Jumping", true);
                 }
+            }
+        }
+        else if (Input.GetButtonDown("Jump") && isJumping && !doubleJump && !isClimbing)
+        {
+            rigid.velocity = new Vector2(rigid.velocity.x, 7 + stats.agility / 10);
+            {
+                doubleJump = true;
+                animator.SetTrigger("DoubleJump");
             }
         }
     }
