@@ -21,7 +21,6 @@ public class LevelColl : MonoBehaviour
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
             hp.Healed(20);
             currentScene++;
-            hp.SavePlayer();
         }
 
         #region levelskips
@@ -29,14 +28,17 @@ public class LevelColl : MonoBehaviour
         {
             SceneManager.LoadScene(8);
             transform.position = GameObject.FindWithTag("Spawner").transform.position;
+            currentScene = 8;
         }
         if (collision.transform.tag == "mSkip")
         {
             SceneManager.LoadScene(6);
+            currentScene = 6;
         }
         if (collision.transform.tag == "SnowSkip")
         {
             SceneManager.LoadScene(9);
+            currentScene = 9;
         }
         #endregion
     }
@@ -56,5 +58,6 @@ public class LevelColl : MonoBehaviour
     {
         PlayerData data = SaveLoad.LoadPlayer();
         currentScene = data.currentScene + 1;
+        SceneManager.LoadScene(currentScene);
     }
 }
