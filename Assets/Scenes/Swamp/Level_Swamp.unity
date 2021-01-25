@@ -9762,7 +9762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c55c053b33f764f93d09152bd58e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0.5
+  distance: 0
   isHanging: 0
   hangPoint: {fileID: 596518867}
   whatIsPlatform:
