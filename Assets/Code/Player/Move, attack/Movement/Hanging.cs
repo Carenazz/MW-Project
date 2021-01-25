@@ -26,6 +26,7 @@ public class Hanging : MonoBehaviour
         if (hangInfo.collider != null)
         {
             isHanging = true;
+            anim.SetBool("IsHanging", true);
             // Animation for hanging.
 
             if (isHanging == true)
@@ -33,12 +34,14 @@ public class Hanging : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     // Animation for pull up
+                    anim.SetBool("IsHanging", false);
                     anim.SetTrigger("HangPull");
                     isHanging = false;
                 }
                 else if (Input.GetKeyDown(KeyCode.S))
                 {
                     // Animation for at slippe
+                    anim.SetBool("IsHanging", false);
                     anim.SetTrigger("HangFall");
                     isHanging = false;
                 }
@@ -47,6 +50,7 @@ public class Hanging : MonoBehaviour
         else
         {
             isHanging = false;
+            anim.SetBool("IsHanging", false);
         }
     }
 
