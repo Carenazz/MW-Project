@@ -14,6 +14,11 @@ public class Hanging : MonoBehaviour
     public Animator anim;
     #endregion
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     public void HangCheck()
     {
         RaycastHit2D hangInfo = Physics2D.Raycast(transform.position, Vector2.down, distance, whatIsPlatform);
@@ -28,11 +33,13 @@ public class Hanging : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     // Animation for pull up
+                    anim.SetTrigger("HangPull");
                     isHanging = false;
                 }
                 else if (Input.GetKeyDown(KeyCode.S))
                 {
                     // Animation for at slippe
+                    anim.SetTrigger("HangFall");
                     isHanging = false;
                 }
             }
