@@ -25,8 +25,8 @@ public class Hanging : MonoBehaviour
 
     public void HangCheck()
     {
-        RaycastHit2D hangInfo = Physics2D.Raycast(hangPoint.position, Vector2.up, distance, whatIsPlatform);
-        Debug.DrawRay(hangPoint.position, Vector2.down, Color.red, 2f);
+        RaycastHit2D hangInfo = Physics2D.Raycast(hangPoint.position, Vector2.down, distance, whatIsPlatform);
+        Debug.DrawRay(hangPoint.position, Vector2.down, Color.red, 1f);
 
         if (hangInfo.collider != null)
         {
@@ -58,5 +58,4 @@ public class Hanging : MonoBehaviour
             anim.SetBool("IsHanging", false);
         }
     }
-
 }
