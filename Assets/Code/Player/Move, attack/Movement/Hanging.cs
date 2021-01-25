@@ -5,8 +5,12 @@ using UnityEngine;
 public class Hanging : MonoBehaviour
 {
     #region Variables
-    private int distance;
+    [SerializeField]
+    private float distance;
+    [SerializeField]
     private bool isHanging;
+
+    public Transform hangPoint;
     #endregion
 
     #region Components and layermasks
@@ -21,8 +25,9 @@ public class Hanging : MonoBehaviour
 
     public void HangCheck()
     {
-        RaycastHit2D hangInfo = Physics2D.Raycast(transform.position, Vector2.down, distance, whatIsPlatform);
-        
+        RaycastHit2D hangInfo = Physics2D.Raycast(hangPoint.position, Vector2.up, distance, whatIsPlatform);
+        Debug.DrawRay(hangPoint.position, Vector2.down, Color.red, 2f);
+
         if (hangInfo.collider != null)
         {
             isHanging = true;

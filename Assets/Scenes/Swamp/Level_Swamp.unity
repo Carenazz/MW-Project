@@ -9282,6 +9282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51c55c053b33f764f93d09152bd58e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 2
+  isHanging: 0
+  hangPoint: {fileID: 596518867}
   whatIsPlatform:
     serializedVersion: 2
     m_Bits: 8192
@@ -10356,7 +10359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596518866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.077, z: 0}
+  m_LocalPosition: {x: 0.025, y: 1.077, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 371501382}
@@ -10397,8 +10400,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.019620895, y: 0}
-  - {x: 0.35378933, y: 0}
+  - {x: 0.22915459, y: -0.005407095}
+  - {x: 0.35378933, y: -0.0059435368}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

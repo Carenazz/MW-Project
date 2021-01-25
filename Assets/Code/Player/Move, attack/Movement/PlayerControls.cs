@@ -58,6 +58,7 @@ public class PlayerControls : MonoBehaviour
     Collider2D mcoll;
     private LevelSystem levelSystem;
     public XPBar expBar;
+    Hanging hang;
 
     // Animations
     public Animator animator;
@@ -99,6 +100,7 @@ public class PlayerControls : MonoBehaviour
         scenes = GetComponent<LevelColl>();
         mcoll = GetComponent<Collider2D>();
         stats = GetComponent<Stats>();
+        hang = GetComponent<Hanging>();
         #endregion
 
         #region Level System
@@ -125,6 +127,8 @@ public class PlayerControls : MonoBehaviour
                 Climbing();
 
                 Jump();
+
+                hang.HangCheck();
                 #endregion
 
                 PButton();
