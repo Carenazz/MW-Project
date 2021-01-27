@@ -19,7 +19,7 @@ public static class SaveLoad
     public static void SaveStats(Stats stats)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/stats.save";
+        string path = Application.persistentDataPath + "/player.save";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(stats);
@@ -31,7 +31,7 @@ public static class SaveLoad
     public static void SaveScene(LevelColl levels)
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/level.save";
+        string path = Application.persistentDataPath + "/player.save";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(levels);
@@ -43,6 +43,7 @@ public static class SaveLoad
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.save";
+
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

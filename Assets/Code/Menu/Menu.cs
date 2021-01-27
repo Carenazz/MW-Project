@@ -22,4 +22,9 @@ public class Menu : MonoBehaviour
     {
         GetComponent<SettingsMenu>();
     }
+
+    public void LoadGame()
+    {
+        SaveLoad.LoadPlayer();
+    }
 }
