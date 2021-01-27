@@ -7241,26 +7241,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -19, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -17, y: -5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -14, y: -5, z: 0}
     second:
       serializedVersion: 2
@@ -8771,8 +8751,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d27ee257775dd7948a1670c109d67700, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c559d6634945e22459fae408f0fe3061, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: eff6d8d2056718042bd63a7759fb6a32, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 94
     m_Data: {fileID: 21300000, guid: 79d877261c10f93488b279dc6acd5e8c, type: 3}
@@ -8832,10 +8812,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 692f1bd7880b8d64d8c8a804466febdf, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0f229d06ac93fa24f9d523dc4af97b37, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 21300000, guid: 1a9185132ce4d5441a7d85ae4f09e0c4, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 763
+  - m_RefCount: 761
     m_Data:
       e00: 1
       e01: 0
@@ -8854,7 +8834,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 763
+  - m_RefCount: 761
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -17075,6 +17055,7 @@ MonoBehaviour:
   m_StopNaN: 0
   m_Dithering: 0
   m_ClearDepth: 1
+  m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
