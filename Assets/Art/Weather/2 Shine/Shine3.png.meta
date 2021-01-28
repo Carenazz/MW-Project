@@ -1,7 +1,88 @@
 fileFormatVersion: 2
 guid: c3f90c41edfa3864db44ce94d301c73b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 207424878087585163
+    second: Shine3_0
+  - first:
+      213: 7140597055275440677
+    second: Shine3_1
+  - first:
+      213: 8588650615497775829
+    second: Shine3_2
+  - first:
+      213: 5080294179519138342
+    second: Shine3_3
+  - first:
+      213: -2680475126113853022
+    second: Shine3_4
+  - first:
+      213: 807709638502850200
+    second: Shine3_5
+  - first:
+      213: 2399143754932763324
+    second: Shine3_6
+  - first:
+      213: 6360211380006875615
+    second: Shine3_7
+  - first:
+      213: -1669417304420225435
+    second: Shine3_8
+  - first:
+      213: -5588003933635823547
+    second: Shine3_9
+  - first:
+      213: 1739840268916646029
+    second: Shine3_10
+  - first:
+      213: -9080909490140831485
+    second: Shine3_11
+  - first:
+      213: -6386737879253196015
+    second: Shine3_12
+  - first:
+      213: -8930833721348372448
+    second: Shine3_13
+  - first:
+      213: -9112494046698598073
+    second: Shine3_14
+  - first:
+      213: -7540093785900784804
+    second: Shine3_15
+  - first:
+      213: -2900043905975591161
+    second: Shine3_16
+  - first:
+      213: -1812285326120248243
+    second: Shine3_17
+  - first:
+      213: -4868136050475934356
+    second: Shine3_18
+  - first:
+      213: 4729017270722696606
+    second: Shine3_19
+  - first:
+      213: 1480446520695293806
+    second: Shine3_20
+  - first:
+      213: -7293791739974156108
+    second: Shine3_21
+  - first:
+      213: 3742710043044856683
+    second: Shine3_22
+  - first:
+      213: -4619212772174602269
+    second: Shine3_23
+  - first:
+      213: 3456152961898107685
+    second: Shine3_24
+  - first:
+      213: 1588330582957313378
+    second: Shine3_25
+  - first:
+      213: 6604139529780542028
+    second: Shine3_26
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +122,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -55,6 +136,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -99,7 +182,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Shine3_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 31
+        width: 16
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d3dffd3dbe0e200800000000000000
+      internalID: 207424878087585163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 29
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a94e3703f781360800000000000000
+      internalID: 7140597055275440677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 15
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da5facea34013770800000000000000
+      internalID: 8588650615497775829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 10
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a09b4c3a4d08640800000000000000
+      internalID: 5080294179519138342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_4
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 29
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1a6b6131a0dcad0800000000000000
+      internalID: -2680475126113853022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_5
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 31
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e1f9403af853b00800000000000000
+      internalID: 807709638502850200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_6
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 21
+        width: 8
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba3ddda8887b4120800000000000000
+      internalID: 2399143754932763324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_7
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 35
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1f4b16d82044850800000000000000
+      internalID: 6360211380006875615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_8
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 35
+        width: 24
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e642c7ec905d8e0800000000000000
+      internalID: -1669417304420225435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 15
+        width: 8
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548b624670c6372b0800000000000000
+      internalID: -5588003933635823547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 35
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8062baa187252810800000000000000
+      internalID: 1739840268916646029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 24
+        width: 8
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301aea27ee02af180800000000000000
+      internalID: -9080909490140831485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_12
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 3
+        width: 12
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113e499bcbfbd57a0800000000000000
+      internalID: -6386737879253196015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 5
+        width: 16
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02843fa4c0e4f0480800000000000000
+      internalID: -8930833721348372448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_14
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 1
+        width: 10
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7411ba0d1fae98180800000000000000
+      internalID: -9112494046698598073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 6
+        width: 15
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53e04e96a43c5790800000000000000
+      internalID: -7540093785900784804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_16
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 5
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fd94fbe69f0c7d0800000000000000
+      internalID: -2900043905975591161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_17
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 7
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c13f8091879d6e0800000000000000
+      internalID: -1812285326120248243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_18
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 14
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ddb19fd08e07cb0800000000000000
+      internalID: -4868136050475934356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_19
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 11
+        width: 8
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e951d1ef628d0a140800000000000000
+      internalID: 4729017270722696606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_20
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 9
+        width: 8
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67810f444a9b8410800000000000000
+      internalID: 1480446520695293806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_21
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 14
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b089218e0f37ca90800000000000000
+      internalID: -7293791739974156108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_22
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 8
+        width: 8
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63c9f454f6c0f330800000000000000
+      internalID: 3742710043044856683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_23
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 14
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efd594157245efb0800000000000000
+      internalID: -4619212772174602269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_24
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 5
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523d95faec8b6ff20800000000000000
+      internalID: 3456152961898107685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 5
+        width: 24
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d4f07ff32ea0610800000000000000
+      internalID: 1588330582957313378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shine3_26
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 5
+        width: 16
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a3faf79ed96ab50800000000000000
+      internalID: 6604139529780542028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
