@@ -9321,7 +9321,6 @@ GameObject:
   - component: {fileID: 371501385}
   - component: {fileID: 371501390}
   - component: {fileID: 371501393}
-  - component: {fileID: 371501391}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -9641,25 +9640,6 @@ MonoBehaviour:
   sta: {fileID: 1920428386}
   willT: {fileID: 315482681}
   agiT: {fileID: 1008852822}
---- !u!114 &371501391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371501376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c55c053b33f764f93d09152bd58e90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distance: 0
-  isHanging: 0
-  hangPoint: {fileID: 596518867}
-  whatIsPlatform:
-    serializedVersion: 2
-    m_Bits: 8192
-  anim: {fileID: 371501380}
 --- !u!114 &371501393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10715,6 +10695,7 @@ GameObject:
   - component: {fileID: 596518867}
   - component: {fileID: 596518869}
   - component: {fileID: 596518868}
+  - component: {fileID: 596518870}
   m_Layer: 12
   m_Name: HangPoint
   m_TagString: Untagged
@@ -10777,6 +10758,25 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &596518870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596518866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c55c053b33f764f93d09152bd58e90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 0.2
+  isHanging: 0
+  hangPoint: {fileID: 596518867}
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 8192
+  anim: {fileID: 371501380}
 --- !u!1 &646769579
 GameObject:
   m_ObjectHideFlags: 0
