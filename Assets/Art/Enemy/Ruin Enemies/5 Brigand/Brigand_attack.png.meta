@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 8c0c5cb4c72d3cc4dad51030ca2853ea
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7294029447779247207
+    second: Brigand_attack_0
+  - first:
+      213: 7566495297038230535
+    second: Brigand_attack_1
+  - first:
+      213: -6680251421127066118
+    second: Brigand_attack_2
+  - first:
+      213: -3422935190874833364
+    second: Brigand_attack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +113,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Brigand_attack_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 24
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b11e7dcd666ca90800000000000000
+      internalID: -7294029447779247207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brigand_attack_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 22
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704a0a63267910960800000000000000
+      internalID: 7566495297038230535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brigand_attack_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 36
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd3c69d9bafa43a0800000000000000
+      internalID: -6680251421127066118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brigand_attack_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 28
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2eb8b2549a4f70d0800000000000000
+      internalID: -3422935190874833364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
