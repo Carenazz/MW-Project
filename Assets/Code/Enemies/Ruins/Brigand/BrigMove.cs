@@ -53,11 +53,11 @@ public class BrigMove : MonoBehaviour
         if (Vector2.Distance(transform.position, player.position) < fdist)
         {
             rb.MovePosition(newPos);
-            anim.SetBool("Idle", false);
+            anim.SetBool("Moving", false);
         }
         else
         {
-            anim.SetBool("Idle", true);
+            anim.SetBool("Moving", true);
         }
     }
 }
