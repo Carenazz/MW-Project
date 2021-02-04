@@ -39,7 +39,7 @@ public class BrigStateMachine : StateMachineBehaviour
             #region Attack
             if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
             {
-                animator.SetTrigger("Attacking");
+                animator.SetTrigger("Attack");
                 timer = 1f;
             }
             else
@@ -57,6 +57,6 @@ public class BrigStateMachine : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.ResetTrigger("Attacking");
+        animator.ResetTrigger("Attack");
     }
 }
