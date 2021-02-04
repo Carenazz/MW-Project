@@ -8,7 +8,8 @@ public class BrigHP : MonoBehaviour
     public Animator anim;
 
     [SerializeField]
-    private int maxHealth = 100, currentHealth;
+    private int maxHealth = 100;
+    public int currentHealth;
 
     BrigMove move;
     #endregion
