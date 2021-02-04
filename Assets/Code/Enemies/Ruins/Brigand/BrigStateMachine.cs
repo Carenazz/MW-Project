@@ -4,45 +4,59 @@ using UnityEngine;
 
 public class BrigStateMachine : StateMachineBehaviour
 {
-    // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    #region Variables
+    [SerializeField]
+    private float speed = 0f, attackRange = 1.5f, timer = 1f;
 
-    // OnStateUpdate is called before OnStateUpdate is called on any state inside this state machine
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    Transform player;
+    Rigidbody2D rb;
 
-    // OnStateExit is called before OnStateExit is called on any state inside this state machine
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    BrigHP hp;
+    BrigMove move;
+    #endregion
 
-    // OnStateMove is called before OnStateMove is called on any state inside this state machine
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        #region Getting Components
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = animator.GetComponent<Rigidbody2D>();
+        move = animator.GetComponent<BrigMove>();
+        hp = animator.GetComponent<BrigHP>();
+        #endregion
+    }
 
-    // OnStateIK is called before OnStateIK is called on any state inside this state machine
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        #region HP if / else
+        if (hp.currentHealth > 0)
+        {
+            #region Movement
+            move.LookAtPlayer();
 
-    // OnStateMachineEnter is called when entering a state machine via its Entry Node
-    //override public void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
-    //{
-    //    
-    //}
+            move.ChasePlayer();
+            #endregion
 
-    // OnStateMachineExit is called when exiting a state machine via its Exit Node
-    //override public void OnStateMachineExit(Animator animator, int stateMachinePathHash)
-    //{
-    //    
-    //}
+            #region Attack
+            if (Vector2.Distance(player.position, rb.position) <= attackRange && timer <= 0f)
+            {
+                animator.SetTrigger("Attacking");
+                timer = 1f;
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
+            #endregion
+        }
+        else if (hp.currentHealth <= 0)
+        {
+            animator.SetBool("Dead", true);
+        }
+        #endregion
+    }
+
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.ResetTrigger("Attacking");
+    }
 }
