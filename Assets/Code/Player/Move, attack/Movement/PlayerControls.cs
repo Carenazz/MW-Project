@@ -79,14 +79,30 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     // Debugging attemtps.
+    private static PlayerControls playerInstance;
+
+    public static PlayerControls Instance { get { return playerInstance; } }
+
     // private bool created = false;
     #endregion
+
+    private void Awake()
+    {
+        if (playerInstance != null && playerInstance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            playerInstance = this;
+        }
+    }
 
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
+        
         #region variables declared
         speed = 7f;
         movement = 0f;

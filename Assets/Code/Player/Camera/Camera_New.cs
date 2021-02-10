@@ -16,13 +16,11 @@ public class Camera_New : MonoBehaviour
 
     private void Start()
     {
-
-        thePlayer = FindObjectOfType<PlayerControls>();
+        thePlayer = PlayerControls.Instance;
         lastPlayerPosition = thePlayer.transform.position;
     }
     private void Update()
     {
-
         distanceToMove = thePlayer.transform.position.x - lastPlayerPosition.x;
         yDistance = thePlayer.transform.position.y - lastPlayerPosition.y;
         transform.position = new Vector3(
