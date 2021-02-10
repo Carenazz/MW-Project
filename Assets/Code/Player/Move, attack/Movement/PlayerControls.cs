@@ -424,6 +424,8 @@ public class PlayerControls : MonoBehaviour
 
     public void LoadPlayer()
     {
+        scenes.LoadLevel();
+
         PlayerData data = SaveLoad.LoadPlayer();
 
         level = data.levels;
@@ -436,7 +438,6 @@ public class PlayerControls : MonoBehaviour
         transform.position = position;
 
         stats.LoadStats();
-        scenes.LoadLevel();
     }
 
     #endregion

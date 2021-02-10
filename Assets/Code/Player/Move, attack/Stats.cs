@@ -59,7 +59,7 @@ public class Stats : MonoBehaviour
 
     public void LoadStats()
     {
-        PlayerData data = SaveLoad.LoadPlayer();
+        PlayerData data = SaveLoad.LoadStats();
 
         str = data.str + 2;
         stamina = data.stamina + 1;
