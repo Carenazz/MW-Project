@@ -442,10 +442,7 @@ public class PlayerControls : MonoBehaviour
     {
         PlayerData data = SaveLoad.LoadPlayer();
 
-        if (scenes.currentScene != 1)
-        {
-            scenes.LoadLevel();
-        }
+        scenes.LoadLevel();
 
         level = data.levels;
         currentHealth = data.health;
