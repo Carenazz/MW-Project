@@ -83,7 +83,6 @@ public class PlayerControls : MonoBehaviour
 
     public static PlayerControls Instance { get { return playerInstance; } }
 
-    Camera_New cam;
     // private bool created = false;
     #endregion
 
@@ -118,7 +117,6 @@ public class PlayerControls : MonoBehaviour
         mcoll = GetComponent<Collider2D>();
         stats = GetComponent<Stats>();
         hang = GetComponent<Hanging>();
-        cam = GetComponent<Camera_New>();
         #endregion
 
         #region Level System
@@ -442,12 +440,12 @@ public class PlayerControls : MonoBehaviour
 
     public void LoadPlayer()
     {
+        PlayerData data = SaveLoad.LoadPlayer();
+
         if (scenes.currentScene != 1)
         {
             scenes.LoadLevel();
         }
-
-        PlayerData data = SaveLoad.LoadPlayer();
 
         level = data.levels;
         currentHealth = data.health;
