@@ -16,9 +16,9 @@ public class Camera_New : MonoBehaviour
 
     private void Start()
     {
-        thePlayer = PlayerControls.Instance;
-        lastPlayerPosition = thePlayer.transform.position;
+        FindPlayer();
     }
+
     private void Update()
     {
         distanceToMove = thePlayer.transform.position.x - lastPlayerPosition.x;
@@ -34,5 +34,11 @@ public class Camera_New : MonoBehaviour
         Vector3 desiredPostion = lastPlayerPosition + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPostion, smoothSpeed);
         transform.position = smoothedPosition;
+    }
+    
+    public void FindPlayer()
+    {
+        thePlayer = PlayerControls.Instance;
+        lastPlayerPosition = thePlayer.transform.position;
     }
 }
