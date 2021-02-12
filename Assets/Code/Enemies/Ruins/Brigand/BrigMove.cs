@@ -8,7 +8,7 @@ public class BrigMove : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField]
-    private float speed = 2.5f, stopDistance, fdist = 10f;
+    private float speed = 3f, stopDistance, fdist = 10f;
 
     BrigHP hp;
     Animator anim;
@@ -48,16 +48,19 @@ public class BrigMove : MonoBehaviour
 
     public void ChasePlayer()
     {
-        Vector2 target = new Vector2(player.position.x, rb.position.y);
-        Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, player.position) < fdist)
+        if (hp.currentHealth > 0)
         {
-            rb.MovePosition(newPos);
-            anim.SetBool("Moving", false);
-        }
-        else
-        {
-            anim.SetBool("Moving", true);
+            Vector2 target = new Vector2(player.position.x, rb.position.y);
+            Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, player.position) < fdist)
+            {
+                rb.MovePosition(newPos);
+                anim.SetBool("Moving", false);
+            }
+            else
+            {
+                anim.SetBool("Moving", true);
+            }
         }
     }
 }
