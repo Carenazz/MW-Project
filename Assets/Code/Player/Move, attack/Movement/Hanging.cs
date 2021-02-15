@@ -52,7 +52,7 @@ public class Hanging : MonoBehaviour
                 }
             }
         }
-        else
+        else if (hangInfo.collider == null)
         {
             isHanging = false;
             anim.SetBool("IsHanging", false);
