@@ -9,8 +9,10 @@ public class BrigStateMachine : StateMachineBehaviour
     private float speed = 0f, attackRange = 1.5f, timer = 1f;
 
     Transform player;
-    Rigidbody2D rb;
+    #endregion
 
+    #region Components
+    Rigidbody2D rb;
     BrigHP hp;
     BrigMove move;
     #endregion

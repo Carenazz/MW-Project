@@ -5,14 +5,16 @@ using UnityEngine;
 public class Camera_New : MonoBehaviour
 {
     // Inspired partly by unity answers and camera clamp by Alexander
-    public PlayerControls thePlayer;
 
+    #region Variables
     public Vector3 offset;
     private Vector3 lastPlayerPosition;
     private float distanceToMove, yDistance;
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.125f, xMin, xMax;
+    #endregion
 
-    public float xMin, xMax;
+    // Finding player
+    public PlayerControls thePlayer;
 
     private void Start()
     {

@@ -6,9 +6,9 @@ public class BrigAtt : MonoBehaviour
 {
     #region Variables
     public int attackDamage = 20;
+    public float attackRange = 2f;
 
     public Vector3 attackOffset;
-    public float attackRange = 2f;
     public LayerMask attackMask;
     #endregion
 

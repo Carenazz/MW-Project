@@ -5,16 +5,17 @@ using UnityEngine;
 public class BrigMove : MonoBehaviour
 {
     #region variables
-    Rigidbody2D rb;
-
     [SerializeField]
     private float speed = 3f, stopDistance, fdist = 10f;
 
+    private bool isFlipped = false;
+    Transform player;
+    #endregion
+
+    #region Components
+    Rigidbody2D rb;
     BrigHP hp;
     Animator anim;
-
-    Transform player;
-    private bool isFlipped = false;
     #endregion
 
     void Awake()

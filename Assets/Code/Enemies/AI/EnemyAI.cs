@@ -6,15 +6,16 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
     #region Variables
-    public Transform target;
+    public float speed = 6f, nextWaypointDistance = 3f;
 
-    public float speed = 6f;
-    public float nextWaypointDistance = 3f;
-
-    Path path;
     int currentWaypoint = 0;
     bool reachedEndOfPath = false;
 
+    public Transform target;
+    #endregion
+
+    #region Components
+    Path path;
     Seeker seeker;
     Rigidbody2D rb;
     #endregion
