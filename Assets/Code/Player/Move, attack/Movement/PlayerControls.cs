@@ -143,9 +143,10 @@ public class PlayerControls : MonoBehaviour
                 Climbing();
 
                 Jump();
-
-                hang.HangCheck();
                 #endregion
+
+                // Hanging checker.
+                hang.HangCheck();
 
                 PButton();
 
