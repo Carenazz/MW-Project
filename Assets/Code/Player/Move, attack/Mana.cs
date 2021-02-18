@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Mana : MonoBehaviour
 {
-    #region Mana
+    #region Mana variables.
     public int mana;
     private int maxMana = 150, manaRegen;
     private float regenTimer;

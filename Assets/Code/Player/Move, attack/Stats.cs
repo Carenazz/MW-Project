@@ -28,6 +28,7 @@ public class Stats : MonoBehaviour
     }
     #endregion
 
+    #region Stats levelling up and setting
     public void LevelStats(object sender, EventArgs e)
     {
         agility += 0.2f;
@@ -51,7 +52,9 @@ public class Stats : MonoBehaviour
         willT.text = "Will: " + will;
         agiT.text = "Agility: " + agility;
     }
+    #endregion
 
+    #region Saving and loading
     public void SaveStats()
     {
         SaveLoad.SaveStats(this);
@@ -68,4 +71,5 @@ public class Stats : MonoBehaviour
 
         SetTexts();
     }
+    #endregion
 }
