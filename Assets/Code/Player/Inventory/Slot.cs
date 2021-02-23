@@ -29,13 +29,4 @@ public class Slot : MonoBehaviour
             GameObject.Destroy(child.gameObject);
         }
     }
-
-    public void UseItem()
-    {
-        foreach (Transform child in transform)
-        {
-
-            GameObject.Destroy(child.gameObject);
-        }
-    }
 }
