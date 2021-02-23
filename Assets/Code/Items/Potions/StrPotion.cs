@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class StrPotion : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Stats stats;
+
+    private void Awake()
     {
-        
+        stats.GetComponent<Stats>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
+        stats.str = stats.str + 2;
+        Destroy(this);
     }
 }
