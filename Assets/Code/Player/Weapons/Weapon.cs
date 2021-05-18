@@ -63,9 +63,9 @@ public class Weapon : MonoBehaviour
             if (hit.tag == "Enemy")
             {
                 #region Working hits
-                if (hit.gameObject.GetComponent<EnemyHP>() != null)
+                if (hit.gameObject.GetComponent<VikingHP>() != null)
                 {
-                    hit.GetComponent<EnemyHP>().TakeDamage(attackDamage + stats.Strength);
+                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 else if (hit.gameObject.GetComponent<BossHP>() != null)
                 {
@@ -83,13 +83,12 @@ public class Weapon : MonoBehaviour
                 {
                     hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.Strength);
                 }
-                if (hit.gameObject.GetComponent<VikingHP>() != null)
-                {
-                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength);
-                }
                 #endregion
                 #region Testing hits
-                
+                if (hit.gameObject.GetComponent<HealthSystem>() != null)
+                {
+                    hit.GetComponent<HealthSystem>().TakeDamage(attackDamage + stats.Strength);
+                }
                 #endregion
             }
         }

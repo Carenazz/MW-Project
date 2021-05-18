@@ -2,66 +2,55 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHP : MonoBehaviour
+class EnemyHP : HealthSystem
 {
-    public Animator animator;
-
-    private double maxHealth = 100, currentHealth;
+    [SerializeField]
+    private double setMax = 100;
 
     #region Components
-    Rigidbody2D rigid;
-    Collider2D m_coll;
     EnemyScript enemy;
     #endregion
 
     void Start()
     {
-
-        currentHealth = maxHealth;
-
         #region calling components
         enemy = GetComponent<EnemyScript>();
-        m_coll = GetComponent<Collider2D>();
-        rigid = GetComponent<Rigidbody2D>();
         #endregion
+
+        SetHealth();
     }
 
-    #region Damage / Death
-    public void TakeDamage(int damage)
+    public void SetHealth()
     {
-        Health -= damage;
+        maxHealth = setMax;
 
-        animator.SetTrigger("Hurt");
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        currentHealth = maxHealth;
     }
 
-    public void Die()
-    {
-        animator.SetBool("Death", true);
+    //#region Damage / Death
+    //public void TakeDamage(int damage)
+    //{
+    //    currentHealth -= damage;
 
-        this.enabled = false;
-        if (enemy.enabled == true)
-        {
-            enemy.enabled = false;
-        }
-        m_coll.enabled = !m_coll.enabled;
-        rigid.gravityScale = 0;
-    }
-    #endregion
+    //    animator.SetTrigger("Hurt");
 
-    public double Health
-    {
-        get
-        {
-            return currentHealth;
-        }
-        set
-        {
-            currentHealth = value;
-        }
-    }
+    //    if (currentHealth <= 0)
+    //    {
+    //        Die();
+    //    }
+    //}
+
+    //public void Die()
+    //{
+    //    animator.SetBool("Death", true);
+
+    //    this.enabled = false;
+    //    if (enemy.enabled == true)
+    //    {
+    //        enemy.enabled = false;
+    //    }
+    //    m_coll.enabled = !m_coll.enabled;
+    //    rigid.gravityScale = 0;
+    //}
+    //#endregion
 }

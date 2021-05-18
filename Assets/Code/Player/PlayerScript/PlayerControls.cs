@@ -187,9 +187,9 @@ public class PlayerControls : MonoBehaviour
         #endregion
 
         #region Currenthealth max Limits
-        if (currentHealth > maxHealth + stats.stamina * 10)
+        if (currentHealth > maxHealth + stats.Stamina * 10)
         {
-            currentHealth = maxHealth + stats.stamina * 10; 
+            currentHealth = maxHealth + stats.Stamina * 10; 
         }
         #endregion
 
@@ -371,7 +371,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Regeneration()
     {
-        currentHealth += 5 * stats.will;
+        currentHealth += 5 * stats.Will;
         healthBar.SetHealth(currentHealth);
     }
     
