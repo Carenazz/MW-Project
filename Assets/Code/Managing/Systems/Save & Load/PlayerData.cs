@@ -35,10 +35,10 @@ public class PlayerData
     // Stats saved.
     public PlayerData (Stats stats)
     {
-        str = stats.str;
-        stamina = stats.stamina;
-        will = stats.will;
-        agility = stats.agility;
+        str = stats.Strength;
+        stamina = stats.Stamina;
+        will = stats.Will;
+        agility = stats.Agility;
     }
 
     // Level saved.

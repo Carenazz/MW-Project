@@ -37,13 +37,13 @@ public class Weapon : MonoBehaviour
     {
         if (Time.time >= nextAttack)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Light Attack"))
             {
                 animator.SetTrigger("Attacking");
 
                 nextAttack = Time.time + 1.5f / attackRate / (stats.Agility / 3);
             }
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetButtonDown("Strong Attack"))
             {
                 animator.SetTrigger("StrAtt");
 
@@ -62,35 +62,10 @@ public class Weapon : MonoBehaviour
         {
             if (hit.tag == "Enemy")
             {
-                #region Working hits
-                if (hit.gameObject.GetComponent<EnemyHP>() != null)
+                if (hit.gameObject.GetComponent<HealthSystem>() != null)
                 {
-                    hit.GetComponent<EnemyHP>().TakeDamage(attackDamage + stats.Strength);
+                    hit.GetComponent<HealthSystem>().TakeDamage(attackDamage + stats.Strength);
                 }
-                else if (hit.gameObject.GetComponent<BossHP>() != null)
-                {
-                    hit.GetComponent<BossHP>().TakeDamage(attackDamage + stats.Strength);
-                }
-                else if (hit.gameObject.GetComponent<HyenaHP>() != null)
-                {
-                    hit.GetComponent<HyenaHP>().TakeDamage(attackDamage + stats.Strength);
-                }
-                else if (hit.gameObject.GetComponent<VultureHP>() != null)
-                {
-                    hit.GetComponent<VultureHP>().TakeDamage(attackDamage + stats.Strength);
-                }
-                else if (hit.gameObject.GetComponent<SnowHP>() != null)
-                {
-                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.Strength);
-                }
-                if (hit.gameObject.GetComponent<VikingHP>() != null)
-                {
-                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength);
-                }
-                #endregion
-                #region Testing hits
-                
-                #endregion
             }
         }
     }
@@ -107,35 +82,10 @@ public class Weapon : MonoBehaviour
         {
             if (hit.tag == "Enemy")
             {
-                #region Working hits
-                if (hit.gameObject.GetComponent<EnemyHP>() != null)
+                if (hit.gameObject.GetComponent<HealthSystem>() != null)
                 {
-                    hit.GetComponent<EnemyHP>().TakeDamage(sDamage + stats.Strength * 2);
+                    hit.GetComponent<HealthSystem>().TakeDamage(sDamage + stats.Strength * 2);
                 }
-                else if (hit.gameObject.GetComponent<BossHP>() != null)
-                {
-                    hit.GetComponent<BossHP>().TakeDamage(sDamage + stats.Strength * 2);
-                }
-                else if (hit.gameObject.GetComponent<HyenaHP>() != null)
-                {
-                    hit.GetComponent<HyenaHP>().TakeDamage(sDamage + stats.Strength * 2);
-                }
-                else if (hit.gameObject.GetComponent<VultureHP>() != null)
-                {
-                    hit.GetComponent<VultureHP>().TakeDamage(sDamage + stats.Strength * 2);
-                }
-                else if (hit.gameObject.GetComponent<SnowHP>() != null)
-                {
-                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.Strength * 2);
-                }
-                if (hit.gameObject.GetComponent<VikingHP>() != null)
-                {
-                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength * 2);
-                }
-                #endregion
-
-                #region Test hits
-                #endregion
             }
         }
     }
