@@ -16,7 +16,7 @@ public class StrPotion : MonoBehaviour
     {
         if (!isUsed)
         {
-            stats.str = stats.str + 2;
+            stats.str += 2;
             Destroy(this);
             isUsed = true;
         }

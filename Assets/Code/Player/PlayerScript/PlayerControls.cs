@@ -146,7 +146,7 @@ public class PlayerControls : MonoBehaviour
                 #endregion
 
                 // Hanging checker.
-                hang.HangCheck();
+                //hang.HangCheck();
 
                 PButton();
 

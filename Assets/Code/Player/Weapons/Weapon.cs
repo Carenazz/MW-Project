@@ -41,13 +41,13 @@ public class Weapon : MonoBehaviour
             {
                 animator.SetTrigger("Attacking");
 
-                nextAttack = Time.time + 1.5f / attackRate / (stats.agility / 3);
+                nextAttack = Time.time + 1.5f / attackRate / (stats.Agility / 3);
             }
             if (Input.GetKeyDown(KeyCode.F))
             {
                 animator.SetTrigger("StrAtt");
 
-                nextAttack = Time.time + 3f / attackRate / (stats.agility / 3);
+                nextAttack = Time.time + 3f / attackRate / (stats.Agility / 3);
             }
         }
 
@@ -65,27 +65,27 @@ public class Weapon : MonoBehaviour
                 #region Working hits
                 if (hit.gameObject.GetComponent<EnemyHP>() != null)
                 {
-                    hit.GetComponent<EnemyHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<EnemyHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 else if (hit.gameObject.GetComponent<BossHP>() != null)
                 {
-                    hit.GetComponent<BossHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<BossHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 else if (hit.gameObject.GetComponent<HyenaHP>() != null)
                 {
-                    hit.GetComponent<HyenaHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<HyenaHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 else if (hit.gameObject.GetComponent<VultureHP>() != null)
                 {
-                    hit.GetComponent<VultureHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<VultureHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 else if (hit.gameObject.GetComponent<SnowHP>() != null)
                 {
-                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 if (hit.gameObject.GetComponent<VikingHP>() != null)
                 {
-                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.str);
+                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength);
                 }
                 #endregion
                 #region Testing hits
@@ -110,27 +110,27 @@ public class Weapon : MonoBehaviour
                 #region Working hits
                 if (hit.gameObject.GetComponent<EnemyHP>() != null)
                 {
-                    hit.GetComponent<EnemyHP>().TakeDamage(sDamage + stats.str * 2);
+                    hit.GetComponent<EnemyHP>().TakeDamage(sDamage + stats.Strength * 2);
                 }
                 else if (hit.gameObject.GetComponent<BossHP>() != null)
                 {
-                    hit.GetComponent<BossHP>().TakeDamage(sDamage + stats.str * 2);
+                    hit.GetComponent<BossHP>().TakeDamage(sDamage + stats.Strength * 2);
                 }
                 else if (hit.gameObject.GetComponent<HyenaHP>() != null)
                 {
-                    hit.GetComponent<HyenaHP>().TakeDamage(sDamage + stats.str * 2);
+                    hit.GetComponent<HyenaHP>().TakeDamage(sDamage + stats.Strength * 2);
                 }
                 else if (hit.gameObject.GetComponent<VultureHP>() != null)
                 {
-                    hit.GetComponent<VultureHP>().TakeDamage(sDamage + stats.str * 2);
+                    hit.GetComponent<VultureHP>().TakeDamage(sDamage + stats.Strength * 2);
                 }
                 else if (hit.gameObject.GetComponent<SnowHP>() != null)
                 {
-                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.str * 2);
+                    hit.GetComponent<SnowHP>().TakeDamage(attackDamage + stats.Strength * 2);
                 }
                 if (hit.gameObject.GetComponent<VikingHP>() != null)
                 {
-                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.str * 2);
+                    hit.GetComponent<VikingHP>().TakeDamage(attackDamage + stats.Strength * 2);
                 }
                 #endregion
 

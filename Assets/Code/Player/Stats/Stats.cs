@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Stats : MonoBehaviour
 {
     #region Stats, Text and levelSystem (including start)
-    public int str = 2, stamina = 1, will = 1;
+    private int str = 2, stamina = 1, will = 1;
     public float agility = 2f;
     private LevelSystem levelSystem;
     [SerializeField]
@@ -31,10 +31,10 @@ public class Stats : MonoBehaviour
     #region Stats levelling up and setting
     public void LevelStats(object sender, EventArgs e)
     {
-        agility += 0.2f;
-        str += 1;
-        will += 1 / 3;
-        stamina += 1;
+        Agility += 0.2f;
+        Strength += 1;
+        Will += 1 / 3;
+        Stamina += 1;
         SetTexts();
     }
 
@@ -70,6 +70,56 @@ public class Stats : MonoBehaviour
         agility = data.agility + 2f;
 
         SetTexts();
+    }
+    #endregion
+
+    #region Properties
+    public int Strength
+    {
+        get
+        {
+            return str;
+        }
+        set
+        {
+            str = value;
+        }
+    }
+
+    public int Stamina
+    {
+        get
+        {
+            return stamina;
+        }
+        set
+        {
+            stamina = value;
+        }
+    }
+
+    public int Will
+    {
+        get
+        {
+            return will;
+        }
+        set
+        {
+            will = value;
+        }
+    }
+
+    public float Agility
+    {
+        get
+        {
+            return agility;
+        }
+        set
+        {
+            agility = value;
+        }
     }
     #endregion
 }

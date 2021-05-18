@@ -6,7 +6,7 @@ public class EnemyHP : MonoBehaviour
 {
     public Animator animator;
 
-    public double maxHealth = 100, currentHealth;
+    private double maxHealth = 100, currentHealth;
 
     #region Components
     Rigidbody2D rigid;
@@ -29,7 +29,7 @@ public class EnemyHP : MonoBehaviour
     #region Damage / Death
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        Health -= damage;
 
         animator.SetTrigger("Hurt");
 
@@ -52,4 +52,16 @@ public class EnemyHP : MonoBehaviour
         rigid.gravityScale = 0;
     }
     #endregion
+
+    public double Health
+    {
+        get
+        {
+            return currentHealth;
+        }
+        set
+        {
+            currentHealth = value;
+        }
+    }
 }
