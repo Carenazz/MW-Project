@@ -5275,6 +5275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
+  regen: 0
   currentHealth: 0
   anim: {fileID: 185540350}
   rigid: {fileID: 185540347}
@@ -9819,7 +9820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &399038247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12026,6 +12027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
+  regen: 0
   currentHealth: 0
   anim: {fileID: 903971783}
   rigid: {fileID: 903971780}

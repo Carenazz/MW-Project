@@ -10,12 +10,12 @@ public class EnemyScript : MonoBehaviour
 
     #region variables
     public Animator animator;
+    EnemyHP myHP;
 
     [SerializeField]
     private float timeBetweenAttacks = 1.5f, distance = 0.5f, detectDistance = 2f, timer = 0f;
 
     public int attackDamage = 20;
-    private bool isDead = false;
     public Transform hitDetection;
 
     public LayerMask whatIsPlayer;
@@ -36,17 +36,17 @@ public class EnemyScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         playerHealth = player.GetComponent<PlayerControls>();
+        myHP = GetComponent<EnemyHP>();
     }
 
     void Attack()
     {
             playerHealth.TakeDamage(attackDamage);
-
     }
 
     private void Update()
     {
-        if (!isDead)
+        if (myHP.currentHealth >= 0)
         {
             if (timer <= 0f)
             {
