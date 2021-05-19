@@ -20,12 +20,14 @@ public class PlayerControls : MonoBehaviour
 
     #region Health system
 
-    public HealthBar healthBar;
+    PlayerHealth myHP;
 
-    [SerializeField]
-    private int maxHealth = 100;
-    public int currentHealth;
-    private float deathTimer;
+    //public HealthBar healthBar;
+
+    //[SerializeField]
+    //private int maxHealth = 100;
+    //public int currentHealth;
+    //private float deathTimer;
 
     #endregion
 
@@ -100,17 +102,15 @@ public class PlayerControls : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
         
         #region variables declared
         speed = 7f;
         movement = 0f;
-        deathTimer = 1.5f;
         #endregion
 
         #region Getting components
         SRender = GetComponent<SpriteRenderer>();
+        myHP = GetComponent<PlayerHealth>();
         rigid = GetComponent<Rigidbody2D>();
         weapon = GetComponent<Weapon>();
         scenes = GetComponent<LevelColl>();
@@ -131,7 +131,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
 
-        if (currentHealth > 0)
+        if (myHP.currentHealth > 0)
         {
             if (isPressing == false)
             {
@@ -166,30 +166,16 @@ public class PlayerControls : MonoBehaviour
                 }
                 #endregion
             }
-            #region RegenTimer
-            if (rTimer <= 0)
-            {
-                rTimer = 10f;
-                Regeneration();
-            }
-            #endregion
         }
 
         #region Life handler and death
-        else if (currentHealth <= 0)
+        else if (myHP.currentHealth <= 0)
         {
-            Dying();
+            myHP.Die();
         }
         else
         {
             Debug.Log("Some error has occured");
-        }
-        #endregion
-
-        #region Currenthealth max Limits
-        if (currentHealth > maxHealth + stats.Stamina * 10)
-        {
-            currentHealth = maxHealth + stats.Stamina * 10; 
         }
         #endregion
 
@@ -356,45 +342,45 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     #region Damage / Death
-    public void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-        healthBar.SetHealth(currentHealth);
-        animator.SetTrigger("Hurt");
-    }
+    //public void TakeDamage(int amount)
+    //{
+    //    currentHealth -= amount;
+    //    healthBar.SetHealth(currentHealth);
+    //    animator.SetTrigger("Hurt");
+    //}
 
-    public void Healed(int amount)
-    {
-        currentHealth += amount;
-        healthBar.SetHealth(currentHealth);
-    }
+    //public void Healed(int amount)
+    //{
+    //    currentHealth += amount;
+    //    healthBar.SetHealth(currentHealth);
+    //}
 
-    private void Regeneration()
-    {
-        currentHealth += 5 * stats.Will;
-        healthBar.SetHealth(currentHealth);
-    }
+    //private void Regeneration()
+    //{
+    //    currentHealth += 5 * stats.Will;
+    //    healthBar.SetHealth(currentHealth);
+    //}
     
-    void Dying()
-    {
-        animator.SetBool("Death", true);
-        weapon.enabled = false;
-        if (deathTimer > 0)
-        {
-            deathTimer -= Time.deltaTime;
-            mcoll.enabled = !mcoll.enabled;
-        }
-        else if (deathTimer <= 0)
-        {
-            animator.SetBool("Death", false);
-            currentHealth = maxHealth;
-            healthBar.SetMaxHealth(maxHealth);
-            deathTimer = 1.5f;
-            transform.position = GameObject.FindWithTag("Respawn").transform.position;
-            weapon.enabled = true;
-            mcoll.enabled = true;
-        }
-    }
+    //void Dying()
+    //{
+    //    animator.SetBool("Death", true);
+    //    weapon.enabled = false;
+    //    if (deathTimer > 0)
+    //    {
+    //        deathTimer -= Time.deltaTime;
+    //        mcoll.enabled = !mcoll.enabled;
+    //    }
+    //    else if (deathTimer <= 0)
+    //    {
+    //        animator.SetBool("Death", false);
+    //        currentHealth = maxHealth;
+    //        healthBar.SetMaxHealth(maxHealth);
+    //        deathTimer = 1.5f;
+    //        transform.position = GameObject.FindWithTag("Respawn").transform.position;
+    //        weapon.enabled = true;
+    //        mcoll.enabled = true;
+    //    }
+    //}
 
     #endregion
 
@@ -446,7 +432,6 @@ public class PlayerControls : MonoBehaviour
         scenes.LoadLevel();
 
         level = data.levels;
-        currentHealth = data.health;
 
         Vector3 position;
         position.x = data.position[0];

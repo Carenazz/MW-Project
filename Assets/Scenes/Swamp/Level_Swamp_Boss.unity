@@ -682,13 +682,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 650
+  regen: 0
   currentHealth: 0
   anim: {fileID: 235382806}
   rigid: {fileID: 235382804}
   m_coll: {fileID: 235382805}
-  setMax: 650
   enable: {fileID: 1723976058}
   key: {fileID: 1723976053}
+  setMax: 1
 --- !u!58 &235382814
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3357,7 +3358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1723976054
 Animator:
   serializedVersion: 3
@@ -3384,7 +3385,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723976053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3450,7 +3451,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723976053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -3484,6 +3485,8 @@ MonoBehaviour:
   level: {fileID: 1723976053}
   newCP: {fileID: 0}
   cp: {fileID: 0}
+  m_coll: {fileID: 0}
+  m_spriteRenderer: {fileID: 0}
 --- !u!1001 &1725635437
 PrefabInstance:
   m_ObjectHideFlags: 0

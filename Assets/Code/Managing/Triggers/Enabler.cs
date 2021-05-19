@@ -8,11 +8,23 @@ public class Enabler : MonoBehaviour
     public GameObject level;
     public GameObject newCP;
     public GameObject cp;
+    [SerializeField]
+    private Collider2D m_coll;
+    [SerializeField]
+    private SpriteRenderer m_spriteRenderer;
+
     #endregion
+
+    private void Start()
+    {
+        m_coll = gameObject.GetComponent<Collider2D>();
+        m_spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
 
     public void Enabled()
     {
-        level.SetActive(true);
+        m_coll.enabled = true;
+        m_spriteRenderer.enabled = true;
     }
 
     public void CheckEnable()

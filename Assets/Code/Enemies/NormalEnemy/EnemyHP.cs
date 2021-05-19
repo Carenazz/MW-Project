@@ -17,4 +17,17 @@ class EnemyHP : HealthSystem
         maxHealth = setMax;
         currentHealth = maxHealth;
     }
+
+    public override void Die()
+    {
+        base.Die();
+        //anim.SetBool("Death", true);
+        //this.m_coll.enabled = !this.m_coll.enabled;
+        //this.rigid.gravityScale = 0;
+
+        if (this.enabled == true)
+        {
+            this.enabled = false;
+        }
+    }
 }

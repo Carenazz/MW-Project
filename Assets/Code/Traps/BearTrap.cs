@@ -12,13 +12,13 @@ public class BearTrap : MonoBehaviour
     Animator animator;
 
     private Transform player;
-    PlayerControls health;
+    PlayerHealth health;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        health = player.GetComponent<PlayerControls>();
+        health = player.GetComponent<PlayerHealth>();
     }
 
     private void Update()

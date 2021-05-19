@@ -29,13 +29,13 @@ public class EnemyScript : MonoBehaviour
 
     // Detect player
     private Transform player;
-    PlayerControls playerHealth;
+    PlayerHealth playerHealth;
     #endregion
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        playerHealth = player.GetComponent<PlayerControls>();
+        playerHealth = player.GetComponent<PlayerHealth>();
         myHP = GetComponent<EnemyHP>();
     }
 
