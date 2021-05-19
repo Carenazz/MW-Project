@@ -9,6 +9,14 @@ public class WispHeal : MonoBehaviour
     public Vector3 healOffset;
     public float healRange = 2f;
     public LayerMask healMask;
+    PlayerHealth player;
+    private Transform m_player;
+
+    private void Start()
+    {
+        m_player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        player = m_player.GetComponent<PlayerHealth>();
+    }
 
     public void Heal()
     {
@@ -19,7 +27,7 @@ public class WispHeal : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, healRange, healMask);
         if (colInfo != null)
         {
-            colInfo.GetComponent<HealthSystem>().Healed(heal);
+            player.Healed(heal);
         }
     }
 }
