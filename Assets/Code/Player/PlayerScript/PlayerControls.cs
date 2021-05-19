@@ -19,16 +19,7 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     #region Health system
-
     PlayerHealth myHP;
-
-    //public HealthBar healthBar;
-
-    //[SerializeField]
-    //private int maxHealth = 100;
-    //public int currentHealth;
-    //private float deathTimer;
-
     #endregion
 
     #region Climb Variables
@@ -42,9 +33,6 @@ public class PlayerControls : MonoBehaviour
     public int level = 1, expA, maxExp = 100;
 
     #endregion
-
-    // Attack
-    Weapon weapon;
 
     #region Timer + Bools
     [SerializeField]
@@ -112,7 +100,6 @@ public class PlayerControls : MonoBehaviour
         SRender = GetComponent<SpriteRenderer>();
         myHP = GetComponent<PlayerHealth>();
         rigid = GetComponent<Rigidbody2D>();
-        weapon = GetComponent<Weapon>();
         scenes = GetComponent<LevelColl>();
         mcoll = GetComponent<Collider2D>();
         stats = GetComponent<Stats>();
@@ -341,49 +328,6 @@ public class PlayerControls : MonoBehaviour
     }
     #endregion
 
-    #region Damage / Death
-    //public void TakeDamage(int amount)
-    //{
-    //    currentHealth -= amount;
-    //    healthBar.SetHealth(currentHealth);
-    //    animator.SetTrigger("Hurt");
-    //}
-
-    //public void Healed(int amount)
-    //{
-    //    currentHealth += amount;
-    //    healthBar.SetHealth(currentHealth);
-    //}
-
-    //private void Regeneration()
-    //{
-    //    currentHealth += 5 * stats.Will;
-    //    healthBar.SetHealth(currentHealth);
-    //}
-    
-    //void Dying()
-    //{
-    //    animator.SetBool("Death", true);
-    //    weapon.enabled = false;
-    //    if (deathTimer > 0)
-    //    {
-    //        deathTimer -= Time.deltaTime;
-    //        mcoll.enabled = !mcoll.enabled;
-    //    }
-    //    else if (deathTimer <= 0)
-    //    {
-    //        animator.SetBool("Death", false);
-    //        currentHealth = maxHealth;
-    //        healthBar.SetMaxHealth(maxHealth);
-    //        deathTimer = 1.5f;
-    //        transform.position = GameObject.FindWithTag("Respawn").transform.position;
-    //        weapon.enabled = true;
-    //        mcoll.enabled = true;
-    //    }
-    //}
-
-    #endregion
-
     #region LevelUp animations & WIP
     public void SetLevelSystem(LevelSystem levelSystem)
     {
@@ -417,7 +361,6 @@ public class PlayerControls : MonoBehaviour
     #endregion
 
     #region Save System
-
     public void SavePlayer()
     {
         SaveLoad.SavePlayer(this);
@@ -441,6 +384,5 @@ public class PlayerControls : MonoBehaviour
 
         stats.LoadStats();
     }
-
     #endregion
 }
