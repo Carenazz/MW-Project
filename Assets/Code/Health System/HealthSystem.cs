@@ -25,19 +25,13 @@ abstract class HealthSystem : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
     }
 
-    #region Regeneration and healing
-    public void Regenerate()
+    public void Healed(int heal)
     {
-        currentHealth += regen;
+        currentHealth += heal;
     }
-
-    public void Healed(int amount)
-    {
-        currentHealth += amount;
-    }
-    #endregion
 
     #region Damage / Death
+    // Take damage - Unified for all.
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -50,15 +44,11 @@ abstract class HealthSystem : MonoBehaviour
         }
     }
 
-    public void Die()
+    // Basic death setup.
+    public virtual void Die()
     {
         anim.SetBool("Death", true);
 
-        this.enabled = false;
-        if (this.enabled == true)
-        {
-            this.enabled = false;
-        }
         this.m_coll.enabled = !this.m_coll.enabled;
         this.rigid.gravityScale = 0;
     }

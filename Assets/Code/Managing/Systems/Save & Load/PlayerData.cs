@@ -23,7 +23,6 @@ public class PlayerData
         // Levels, exp, health saved.
         levels = player.level;
         expA = player.expA;
-        health = player.currentHealth;
 
         // Position save.
         position = new float[3];

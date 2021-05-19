@@ -9,12 +9,12 @@ public class FreezeDmg : MonoBehaviour
     public float timer = 2f;
 
     private Transform player;
-    PlayerControls playerHealth;
+    PlayerHealth playerHealth;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        playerHealth = player.GetComponent<PlayerControls>();
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     private void Update()

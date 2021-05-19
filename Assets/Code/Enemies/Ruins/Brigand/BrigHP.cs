@@ -2,43 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrigHP : MonoBehaviour
+class BrigHP : HealthSystem
 {
     #region Variables
-    public Animator anim;
-
-    [SerializeField]
-    private int maxHealth = 250;
-    public int currentHealth;
-
+    private int setMax = 250;
     BrigMove move;
     #endregion
 
     void Start()
     {
+        maxHealth = setMax;
         currentHealth = maxHealth;
         move = GetComponent<BrigMove>();
     }
-
-    #region Health System
-    public void TakeDamage(int damage)
-    {
-        currentHealth -= damage;
-
-        anim.SetTrigger("Hurt");
-
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
-
-    public void Die()
-    {
-        anim.SetBool("Dead", true);
-
-        this.enabled = false;
-        move.enabled = false;
-    }
-    #endregion
 }

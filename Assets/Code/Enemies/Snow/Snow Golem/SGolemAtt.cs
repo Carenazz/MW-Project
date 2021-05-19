@@ -13,7 +13,7 @@ public class SGolemAtt : MonoBehaviour
 
     public LayerMask playerLayer;
 
-    PlayerControls hp;
+    PlayerHealth hp;
     private Transform player;
 
     [SerializeField]
@@ -26,7 +26,7 @@ public class SGolemAtt : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        hp = player.GetComponent<PlayerControls>();
+        hp = player.GetComponent<PlayerHealth>();
     }
 
     void Update()

@@ -9467,6 +9467,7 @@ GameObject:
   - component: {fileID: 371501385}
   - component: {fileID: 371501390}
   - component: {fileID: 371501393}
+  - component: {fileID: 371501391}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -9644,9 +9645,6 @@ MonoBehaviour:
   pDist: 0.15
   speed: 7
   movement: 0
-  healthBar: {fileID: 714411747}
-  maxHealth: 100
-  currentHealth: 0
   distance: 0.5
   bDistance: 1
   climbSpeed: 3
@@ -9784,6 +9782,26 @@ MonoBehaviour:
   sta: {fileID: 1920428386}
   willT: {fileID: 315482681}
   agiT: {fileID: 1008852822}
+--- !u!114 &371501391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371501376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92ed2c194f93414896ae71d553da073, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  regen: 0
+  currentHealth: 0
+  anim: {fileID: 371501380}
+  rigid: {fileID: 371501377}
+  m_coll: {fileID: 371501379}
+  healthBar: {fileID: 714411747}
+  setMax: 100
 --- !u!114 &371501393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16302,7 +16320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1899572407
 Animator:
   serializedVersion: 3
@@ -16382,7 +16400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899572406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.503057, y: -12.079808, z: 191.28302}
+  m_LocalPosition: {x: -20.503057, y: -10.09, z: 191.28302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 857419664}

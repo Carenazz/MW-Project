@@ -14261,6 +14261,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879335158526094573, guid: b068a2c68ba40154da17e8497f4c3000, type: 3}
   m_PrefabInstance: {fileID: 1818365678}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &1818365680 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1879335158526094567, guid: b068a2c68ba40154da17e8497f4c3000, type: 3}
+  m_PrefabInstance: {fileID: 1818365678}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1818365681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14274,14 +14279,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1000
+  regen: 0
   currentHealth: 0
-  anim: {fileID: 0}
-  rigid: {fileID: 0}
-  m_coll: {fileID: 0}
-  setMax: 100
+  anim: {fileID: 1818365684}
+  rigid: {fileID: 1818365680}
+  m_coll: {fileID: 1818365683}
+  setMax: 1000
 --- !u!4 &1818365682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1879335158526094570, guid: b068a2c68ba40154da17e8497f4c3000, type: 3}
+  m_PrefabInstance: {fileID: 1818365678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1818365683 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1879335158526094568, guid: b068a2c68ba40154da17e8497f4c3000, type: 3}
+  m_PrefabInstance: {fileID: 1818365678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1818365684 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1879335158526094569, guid: b068a2c68ba40154da17e8497f4c3000, type: 3}
   m_PrefabInstance: {fileID: 1818365678}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1818997314
