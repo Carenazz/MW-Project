@@ -6,7 +6,7 @@ public class FallingSpike : MonoBehaviour
 {
     private int damage = 50;
 
-    PlayerControls hp;
+    PlayerHealth hp;
     Rigidbody2D rb;
     Animator anim;
     public Transform target;
@@ -18,7 +18,7 @@ public class FallingSpike : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        hp = player.GetComponent<PlayerControls>();
+        hp = player.GetComponent<PlayerHealth>();
     }
     void Triggered()
     {

@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelColl : MonoBehaviour
 {
-    PlayerControls hp;
+    PlayerHealth hp;
     public int currentScene = 0;
 
     private void Start()
     {
-        hp = GetComponent<PlayerControls>();
+        hp = GetComponent<PlayerHealth>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

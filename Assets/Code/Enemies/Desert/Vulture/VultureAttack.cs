@@ -19,7 +19,7 @@ public class VultureAttack : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            colInfo.GetComponent<PlayerControls>().TakeDamage(attackDamage);
+            colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
         }
     }
 }

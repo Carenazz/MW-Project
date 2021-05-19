@@ -6,13 +6,11 @@ using UnityEngine.SceneManagement;
 class BossHP : HealthSystem
 {
     #region Variables
+    [SerializeField]
     private int setMax = 650;
 
-    [SerializeField]
     Enabler enable;
-
     public GameObject key;
-
     BossScript enemy;
     #endregion
 
@@ -24,12 +22,10 @@ class BossHP : HealthSystem
         enable = key.GetComponent<Enabler>();
     }
 
-    // Find out how to get the key enabled once again.
-    //void Update()
-    //{
-    //    if (isDead == true)
-    //    {
-    //        enable.Enabled();
-    //    }
-    //}
+    public override void Die()
+    {
+        base.Die();
+
+        enable.Enabled();
+    }
 }

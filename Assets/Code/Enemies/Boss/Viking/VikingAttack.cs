@@ -31,7 +31,7 @@ public class VikingAttack : MonoBehaviour
             Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
             if (colInfo != null)
             {
-                colInfo.GetComponent<PlayerControls>().TakeDamage(attackDamage);
+                colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
                 timer = 5f / timeBAtt;
             }
         }

@@ -19,7 +19,7 @@ public class WispHeal : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, healRange, healMask);
         if (colInfo != null)
         {
-            colInfo.GetComponent<PlayerControls>().Healed(heal);
+            colInfo.GetComponent<PlayerHealth>().Healed(heal);
         }
     }
 }

@@ -7,12 +7,12 @@ public class OutOfBounds : MonoBehaviour
     public int damage = 100;
 
     private Transform player;
-    PlayerControls playerHealth;
+    PlayerHealth playerHealth;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        playerHealth = player.GetComponent<PlayerControls>();
+        playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
